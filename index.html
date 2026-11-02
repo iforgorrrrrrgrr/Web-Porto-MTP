@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MTP Studio — Web Development Portfolio</title>
+  <meta name="description" content="MTP Studio adalah startup web development yang membangun website impian bisnis Anda. Lihat portfolio kami yang telah membantu puluhan bisnis berkembang secara digital." />
+  <meta name="keywords" content="web development, landing page, website, portofolio, MTP Studio, e-commerce" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-mtp">MTP</span><span class="logo-dot">.</span><span class="logo-studio">Studio</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"         class="nav-link" data-section="home">Home</a></li>
+        <li><a href="#portfolio"    class="nav-link" data-section="portfolio">Portfolio</a></li>
+        <li><a href="#services"     class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#about"        class="nav-link" data-section="about">About</a></li>
+        <li><a href="#contact"      class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn-nav" id="btn-cta-nav">🚀 Mulai Sekarang</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge" data-animate-hero>✦ WEB DEVELOPMENT STUDIO</div>
+        <h1 class="hero-title" data-animate-hero>
+          Kami Bangun<br>
+          Website yang<br>
+          <span class="hero-gradient">Bikin Bisnis</span><br>
+          Kamu <span class="hero-typing" id="typingText"></span><span class="typing-cursor">|</span>
+        </h1>
+        <p class="hero-desc" data-animate-hero>
+          Dari landing page yang memukau hingga toko online yang powerful — kami hadir untuk mewujudkan visi digital bisnis kamu.
+        </p>
+        <div class="hero-actions" data-animate-hero>
+          <a href="#portfolio" class="btn-primary" id="btn-hero-portfolio">
+            <span>🚀</span> Lihat Portfolio
+          </a>
+          <a href="#contact" class="btn-secondary" id="btn-hero-contact">
+            <span>💬</span> Hubungi Kami
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual" data-animate-hero>
+        <div class="browser-wrap">
+          <div class="browser-mockup">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <span class="bdot red"></span>
+                <span class="bdot yellow"></span>
+                <span class="bdot green"></span>
+              </div>
+              <div class="browser-url">✦ mtpstudio.id/portfolio</div>
+            </div>
+            <div class="browser-content">
+              <div class="mock-site">
+                <div class="mock-nav">
+                  <div class="mock-logo"></div>
+                  <div class="mock-links"><span></span><span></span><span></span></div>
+                  <div class="mock-nav-btn"></div>
+                </div>
+                <div class="mock-hero-area">
+                  <div class="mock-hero-text">
+                    <div class="mock-h1"></div>
+                    <div class="mock-h1 short"></div>
+                    <div class="mock-p"></div>
+                    <div class="mock-p shorter"></div>
+                    <div class="mock-cta-row">
+                      <div class="mock-btn-solid"></div>
+                      <div class="mock-btn-outline"></div>
+                    </div>
+                  </div>
+                  <div class="mock-hero-img"></div>
+                </div>
+                <div class="mock-cards-row">
+                  <div class="mock-card-sm c1"></div>
+                  <div class="mock-card-sm c2"></div>
+                  <div class="mock-card-sm c3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="browser-glow"></div>
+        </div>
+        <div class="floating-badge badge-1">⚡ Fast Delivery</div>
+        <div class="floating-badge badge-2">🎨 Premium Design</div>
+        <div class="floating-badge badge-3">📱 Responsive</div>
+      </div>
+    </div>
+    <a href="#stats" class="scroll-indicator" id="scroll-indicator">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-wheel"></div>
+    </a>
+  </section>
+
+  <!-- ===== STATS SECTION ===== -->
+  <section class="stats" id="stats">
+    <div class="stats-container">
+      <div class="stat-item" data-animate>
+        <div class="stat-value">
+          <span class="stat-number" data-target="25">0</span>
+          <span class="stat-suffix">+</span>
+        </div>
+        <div class="stat-label">Proyek Selesai</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item" data-animate>
+        <div class="stat-value">
+          <span class="stat-number" data-target="98">0</span>
+          <span class="stat-suffix">%</span>
+        </div>
+        <div class="stat-label">Klien Puas</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item" data-animate>
+        <div class="stat-value">
+          <span class="stat-number" data-target="15">0</span>
+          <span class="stat-suffix">+</span>
+        </div>
+        <div class="stat-label">Industri Berbeda</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item" data-animate>
+        <div class="stat-value">
+          <span class="stat-number" data-target="3">0</span>
+          <span class="stat-suffix"> Thn</span>
+        </div>
+        <div class="stat-label">Pengalaman</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO SECTION ===== -->
+  <section class="portfolio" id="portfolio">
+    <div class="section-container">
+      <div class="section-header" data-animate>
+        <p class="section-tag">What We've Built</p>
+        <h2 class="section-title">Our <span class="highlight">Portfolio</span></h2>
+        <p class="section-desc">Eksplorasi karya-karya terbaik kami yang telah membantu puluhan bisnis berkembang secara digital.</p>
+      </div>
+
+      <div class="filter-tabs" data-animate>
+        <button class="filter-btn active" data-filter="all"         id="filter-all">All</button>
+        <button class="filter-btn" data-filter="ecommerce"          id="filter-ecommerce">E-Commerce</button>
+        <button class="filter-btn" data-filter="fnb"                id="filter-fnb">F&amp;B</button>
+        <button class="filter-btn" data-filter="korporat"           id="filter-korporat">Korporat</button>
+        <button class="filter-btn" data-filter="pendidikan"         id="filter-pendidikan">Pendidikan</button>
+        <button class="filter-btn" data-filter="umkm"               id="filter-umkm">UMKM</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <!-- Card 1: EShop Premium -->
+        <article class="portfolio-card" data-category="ecommerce" data-project="0" data-animate>
+          <div class="card-preview preview-1">
+            <div class="prev-nav"><div class="prev-logo"></div><div class="prev-links"><i></i><i></i><i></i></div><div class="prev-btn"></div></div>
+            <div class="prev-hero">
+              <div class="prev-text"><div class="prev-h1"></div><div class="prev-h1 s"></div><div class="prev-p"></div><div class="prev-action"><span></span></div></div>
+              <div class="prev-art art-shop"></div>
+            </div>
+            <div class="prev-cards-row"><div class="prev-c"></div><div class="prev-c"></div><div class="prev-c"></div></div>
+          </div>
+          <div class="card-overlay">
+            <button class="overlay-view-btn" data-project="0" id="proj-btn-0">View Project ↗</button>
+          </div>
+          <div class="card-info">
+            <div class="card-tags">
+              <span class="tag cat-tag">E-Commerce</span>
+              <span class="tag tech-tag">HTML/CSS/JS</span>
+            </div>
+            <h3 class="card-title">EShop Premium</h3>
+            <p class="card-desc">Toko online modern dengan sistem keranjang dan katalog produk lengkap.</p>
+          </div>
+        </article>
+
+        <!-- Card 2: Sakura Resto -->
+        <article class="portfolio-card" data-category="fnb" data-project="1" data-animate>
+          <div class="card-preview preview-2">
+            <div class="prev-nav"><div class="prev-logo"></div><div class="prev-links"><i></i><i></i><i></i></div><div class="prev-btn"></div></div>
+            <div class="prev-hero">
+              <div class="prev-text"><div class="prev-h1"></div><div class="prev-h1 s"></div><div class="prev-p"></div><div class="prev-action"><span></span></div></div>
+              <div class="prev-art art-food"></div>
+            </div>
+            <div class="prev-cards-row"><div class="prev-c"></div><div class="prev-c"></div><div class="prev-c"></div></div>
+          </div>
+          <div class="card-overlay">
+            <button class="overlay-view-btn" data-project="1" id="proj-btn-1">View Project ↗</button>
+          </div>
+          <div class="card-info">
+            <div class="card-tags">
+              <span class="tag cat-tag">F&amp;B</span>
+              <span class="tag tech-tag">HTML/CSS/JS</span>
+            </div>
+            <h3 class="card-title">Sakura Resto</h3>
+            <p class="card-desc">Landing page restoran dengan menu interaktif dan sistem reservasi online.</p>
+          </div>
+        </article>
+
+        <!-- Card 3: FitnessPro Club -->
+        <article class="portfolio-card" data-category="umkm" data-project="2" data-animate>
+          <div class="card-preview preview-3">
+            <div class="prev-nav"><div class="prev-logo"></div><div class="prev-links"><i></i><i></i><i></i></div><div class="prev-btn"></div></div>
+            <div class="prev-hero">
+              <div class="prev-text"><div class="prev-h1"></div><div class="prev-h1 s"></div><div class="prev-p"></div><div class="prev-action"><span></span></div></div>
+              <div class="prev-art art-gym"></div>
+            </div>
+            <div class="prev-cards-row"><div class="prev-c"></div><div class="prev-c"></div><div class="prev-c"></div></div>
+          </div>
+          <div class="card-overlay">
+            <button class="overlay-view-btn" data-project="2" id="proj-btn-2">View Project ↗</button>
+          </div>
+          <div class="card-info">
+            <div class="card-tags">
+              <span class="tag cat-tag">UMKM</span>
+              <span class="tag tech-tag">HTML/CSS/JS</span>
+            </div>
+            <h3 class="card-title">FitnessPro Club</h3>
+            <p class="card-desc">Website gym dengan jadwal kelas, paket membership, dan galeri fasilitas.</p>
+          </div>
+        </article>
+
+        <!-- Card 4: AgencyX Creative -->
+        <article class="portfolio-card" data-category="korporat" data-project="3" data-animate>
+          <div class="card-preview preview-4">
+            <div class="prev-nav"><div class="prev-logo"></div><div class="prev-links"><i></i><i></i><i></i></div><div class="prev-btn"></div></div>
+            <div class="prev-hero">
+              <div class="prev-text"><div class="prev-h1"></div><div class="prev-h1 s"></div><div class="prev-p"></div><div class="prev-action"><span></span></div></div>
+              <div class="prev-art art-agency"></div>
+            </div>
+            <div class="prev-cards-row"><div class="prev-c"></div><div class="prev-c"></div><div class="prev-c"></div></div>
+          </div>
+          <div class="card-overlay">
+            <button class="overlay-view-btn" data-project="3" id="proj-btn-3">View Project ↗</button>
+          </div>
+          <div class="card-info">
+            <div class="card-tags">
+              <span class="tag cat-tag">Korporat</span>
+              <span class="tag tech-tag">HTML/CSS/JS</span>
+            </div>
+            <h3 class="card-title">AgencyX Creative</h3>
+            <p class="card-desc">Company profile agensi kreatif yang menonjolkan portofolio dan layanan bisnis.</p>
+          </div>
+        </article>
+
+        <!-- Card 5: EduLearn Platform -->
+        <article class="portfolio-card" data-category="pendidikan" data-project="4" data-animate>
+          <div class="card-preview preview-5">
+            <div class="prev-nav"><div class="prev-logo"></div><div class="prev-links"><i></i><i></i><i></i></div><div class="prev-btn"></div></div>
+            <div class="prev-hero">
+              <div class="prev-text"><div class="prev-h1"></div><div class="prev-h1 s"></div><div class="prev-p"></div><div class="prev-action"><span></span></div></div>
+              <div class="prev-art art-edu"></div>
+            </div>
+            <div class="prev-cards-row"><div class="prev-c"></div><div class="prev-c"></div><div class="prev-c"></div></div>
+          </div>
+          <div class="card-overlay">
+            <button class="overlay-view-btn" data-project="4" id="proj-btn-4">View Project ↗</button>
+          </div>
+          <div class="card-info">
+            <div class="card-tags">
+              <span class="tag cat-tag">Pendidikan</span>
+              <span class="tag tech-tag">HTML/CSS/JS</span>
+            </div>
+            <h3 class="card-title">EduLearn Platform</h3>
+            <p class="card-desc">Landing page platform edukasi online dengan katalog kursus dan profil instruktur.</p>
+          </div>
+        </article>
+
+        <!-- Card 6: PropertyX Realty -->
+        <article class="portfolio-card" data-category="korporat" data-project="5" data-animate>
+          <div class="card-preview preview-6">
+            <div class="prev-nav"><div class="prev-logo"></div><div class="prev-links"><i></i><i></i><i></i></div><div class="prev-btn"></div></div>
+            <div class="prev-hero">
+              <div class="prev-text"><div class="prev-h1"></div><div class="prev-h1 s"></div><div class="prev-p"></div><div class="prev-action"><span></span></div></div>
+              <div class="prev-art art-prop"></div>
+            </div>
+            <div class="prev-cards-row"><div class="prev-c"></div><div class="prev-c"></div><div class="prev-c"></div></div>
+          </div>
+          <div class="card-overlay">
+            <button class="overlay-view-btn" data-project="5" id="proj-btn-5">View Project ↗</button>
+          </div>
+          <div class="card-info">
+            <div class="card-tags">
+              <span class="tag cat-tag">Korporat</span>
+              <span class="tag tech-tag">HTML/CSS/JS</span>
+            </div>
+            <h3 class="card-title">PropertyX Realty</h3>
+            <p class="card-desc">Website properti premium dengan listing lengkap dan fitur pencarian canggih.</p>
+          </div>
+        </article>
+
+      </div><!-- /portfolio-grid -->
+    </div>
+  </section>
+
+  <!-- ===== PROJECT MODAL ===== -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-label="Project Details">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Tutup modal">✕</button>
+      <div class="modal-preview-wrap" id="modalPreviewWrap"></div>
+      <div class="modal-details">
+        <div class="modal-tags-wrap" id="modalTagsWrap"></div>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-long-desc" id="modalLongDesc"></p>
+        <div class="modal-features-list" id="modalFeaturesList"></div>
+        <a href="#contact" class="btn-primary modal-cta-btn" id="modalCTA">Mau Website Seperti Ini? →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services" id="services">
+    <div class="section-container">
+      <div class="section-header" data-animate>
+        <p class="section-tag">What We Offer</p>
+        <h2 class="section-title">Layanan <span class="highlight">Kami</span></h2>
+        <p class="section-desc">Pilih layanan yang paling sesuai dengan kebutuhan bisnis kamu.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-animate id="svc-landing">
+          <div class="service-icon-wrap"><div class="service-icon">🌐</div></div>
+          <h3 class="service-name">Landing Page</h3>
+          <p class="service-desc">Halaman promosi yang dirancang untuk mengkonversi pengunjung menjadi pelanggan. Cocok untuk pelaku UMKM dan bisnis baru.</p>
+          <ul class="service-features">
+            <li>✓ Desain modern &amp; responsif</li>
+            <li>✓ Optimasi kecepatan loading</li>
+            <li>✓ Integrasi WhatsApp &amp; sosmed</li>
+            <li>✓ SEO dasar</li>
+          </ul>
+          <div class="service-price">
+            <span class="price-from">Mulai dari</span>
+            <span class="price-amount">Rp 500rb</span>
+          </div>
+          <a href="#contact" class="btn-service" id="svc-btn-landing">Pilih Paket</a>
+        </div>
+
+        <div class="service-card popular" data-animate id="svc-ecomm">
+          <div class="popular-badge">⭐ Terpopuler</div>
+          <div class="service-icon-wrap"><div class="service-icon">🛒</div></div>
+          <h3 class="service-name">E-Commerce</h3>
+          <p class="service-desc">Toko online lengkap siap pakai dengan sistem manajemen produk, keranjang belanja, dan integrasi pembayaran.</p>
+          <ul class="service-features">
+            <li>✓ Katalog produk tak terbatas</li>
+            <li>✓ Keranjang &amp; checkout</li>
+            <li>✓ Dashboard admin</li>
+            <li>✓ Integrasi payment gateway</li>
+          </ul>
+          <div class="service-price">
+            <span class="price-from">Mulai dari</span>
+            <span class="price-amount">Rp 1,5jt</span>
+          </div>
+          <a href="#contact" class="btn-service popular-btn" id="svc-btn-ecomm">Pilih Paket</a>
+        </div>
+
+        <div class="service-card" data-animate id="svc-corp">
+          <div class="service-icon-wrap"><div class="service-icon">📊</div></div>
+          <h3 class="service-name">Company Profile</h3>
+          <p class="service-desc">Website resmi perusahaan yang profesional untuk membangun kepercayaan dan kredibilitas bisnis di mata klien.</p>
+          <ul class="service-features">
+            <li>✓ Hingga 7 halaman</li>
+            <li>✓ Profil tim &amp; layanan</li>
+            <li>✓ Blog &amp; artikel</li>
+            <li>✓ Formulir kontak &amp; maps</li>
+          </ul>
+          <div class="service-price">
+            <span class="price-from">Mulai dari</span>
+            <span class="price-amount">Rp 1jt</span>
+          </div>
+          <a href="#contact" class="btn-service" id="svc-btn-corp">Pilih Paket</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about" id="about">
+    <div class="section-container">
+      <div class="about-grid">
+        <div class="about-content" data-animate>
+          <p class="section-tag">Who We Are</p>
+          <h2 class="section-title">Tim Muda yang<br><span class="highlight">Passionate</span></h2>
+          <p class="about-text">
+            MTP Studio lahir dari semangat sekelompok anak muda yang percaya bahwa setiap bisnis — dari UMKM kecil hingga perusahaan besar — berhak punya kehadiran digital yang kuat dan profesional.
+          </p>
+          <p class="about-text">
+            Kami menggabungkan desain modern, kode yang bersih, dan strategi digital untuk menciptakan website yang tidak hanya cantik, tapi juga <em>bekerja keras</em> buat bisnis kamu.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="hi-icon">🎯</span>
+              <div class="hi-text">
+                <strong>Berorientasi Hasil</strong>
+                <p>Website kami dirancang untuk menghasilkan konversi nyata.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="hi-icon">⚡</span>
+              <div class="hi-text">
+                <strong>Cepat &amp; Responsif</strong>
+                <p>Optimal di semua perangkat — HP, tablet, dan desktop.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="hi-icon">🤝</span>
+              <div class="hi-text">
+                <strong>Dukungan Penuh</strong>
+                <p>Kami mendampingi kamu bahkan setelah website sudah live.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-team-wrap" data-animate>
+          <div class="team-grid">
+            <div class="team-card" id="team-rizky">
+              <div class="team-avatar av-1">MR</div>
+              <div class="team-name">M. Rizky</div>
+              <div class="team-role">Lead Developer</div>
+            </div>
+            <div class="team-card" id="team-taufik">
+              <div class="team-avatar av-2">TP</div>
+              <div class="team-name">Taufik P.</div>
+              <div class="team-role">UI/UX Designer</div>
+            </div>
+            <div class="team-card" id="team-andi">
+              <div class="team-avatar av-3">AS</div>
+              <div class="team-name">Andi S.</div>
+              <div class="team-role">Backend Dev</div>
+            </div>
+            <div class="team-card" id="team-nadia">
+              <div class="team-avatar av-4">NR</div>
+              <div class="team-name">Nadia R.</div>
+              <div class="team-role">Marketing</div>
+            </div>
+          </div>
+          <div class="team-badge-wrap">
+            <div class="team-badge">🏆 Rising Star Studio 2024</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS SECTION ===== -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-container">
+      <div class="section-header" data-animate>
+        <p class="section-tag">Client Stories</p>
+        <h2 class="section-title">Apa Kata <span class="highlight">Klien Kami</span></h2>
+      </div>
+      <div class="testimonial-area" data-animate>
+        <div class="testimonial-track-wrap">
+          <div class="testimonial-track" id="testimonialTrack">
+            <div class="testimonial-card">
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+              <p class="testi-text">"Website kami jadi lebih profesional dan penjualan meningkat 3x lipat dalam 2 bulan pertama! Tim MTP Studio benar-benar paham kebutuhan bisnis kami."</p>
+              <div class="testi-author">
+                <div class="author-av av-bs">BS</div>
+                <div class="author-info">
+                  <div class="author-name">Budi Santoso</div>
+                  <div class="author-title">Pemilik EShop Premium</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+              <p class="testi-text">"Prosesnya cepat dan hasilnya melebihi ekspektasi! Landing page restoran kami sekarang menarik lebih banyak reservasi online setiap harinya."</p>
+              <div class="testi-author">
+                <div class="author-av av-sa">SA</div>
+                <div class="author-info">
+                  <div class="author-name">Sari Andini</div>
+                  <div class="author-title">Owner Sakura Resto</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+              <p class="testi-text">"MTP Studio memberikan website yang tidak hanya cantik tapi juga berfungsi dengan baik. Member gym kami bertambah signifikan setelah launch!"</p>
+              <div class="testi-author">
+                <div class="author-av av-rh">RH</div>
+                <div class="author-info">
+                  <div class="author-name">Rendi Hartono</div>
+                  <div class="author-title">Manager FitnessPro Club</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="sliderPrev" aria-label="Previous testimonial">‹</button>
+          <div class="slider-dots" id="sliderDots">
+            <button class="sdot active" data-idx="0" aria-label="Testimonial 1"></button>
+            <button class="sdot" data-idx="1" aria-label="Testimonial 2"></button>
+            <button class="sdot" data-idx="2" aria-label="Testimonial 3"></button>
+          </div>
+          <button class="slider-btn" id="sliderNext" aria-label="Next testimonial">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact" id="contact">
+    <div class="contact-glow-orb"></div>
+    <div class="section-container">
+      <div class="contact-box" data-animate>
+        <p class="section-tag">Let's Talk</p>
+        <h2 class="contact-title">Siap Punya Website<br><span class="highlight">Impian Kamu?</span></h2>
+        <p class="contact-desc">
+          Hubungi kami sekarang dan dapatkan <strong>konsultasi GRATIS</strong> untuk project website-mu!
+        </p>
+        <div class="contact-actions">
+          <a href="https://wa.me/6281200000000" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" id="btn-whatsapp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Kami
+          </a>
+          <a href="mailto:hello@mtpstudio.id" class="btn-email" id="btn-email">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+            Email Kami
+          </a>
+        </div>
+        <div class="contact-info-row">
+          <div class="ci-item"><span>📍</span><span>Jl. Inovasi Digital No. 12, Indonesia</span></div>
+          <div class="ci-item"><span>📞</span><span>+62 812-0000-0000</span></div>
+          <div class="ci-item"><span>📧</span><span>hello@mtpstudio.id</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">
+          <span class="logo-mtp">MTP</span><span class="logo-dot">.</span><span class="logo-studio">Studio</span>
+        </a>
+        <p class="footer-tagline">Kami bangun website impian bisnis Anda.</p>
+        <div class="footer-social">
+          <a href="#" class="soc-link" id="soc-ig" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="soc-link" id="soc-tt" aria-label="TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+          </a>
+          <a href="#" class="soc-link" id="soc-li" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links-wrap">
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <a href="#home">Home</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Layanan</h4>
+          <a href="#services">Landing Page</a>
+          <a href="#services">E-Commerce</a>
+          <a href="#services">Company Profile</a>
+          <a href="#contact">Konsultasi Gratis</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 MTP Studio. All rights reserved. Made with ❤️ in Indonesia.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
