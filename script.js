@@ -1,6 +1,6 @@
 /* ============================================================
-   MTP Studio — Portfolio Website
-   script.js — All Interactivity
+   MTP Studio - Portfolio Website
+   script.js - All Interactivity
 ============================================================ */
 
 'use strict';
@@ -14,15 +14,15 @@ const PROJECTS = [
     name: 'EShop Premium',
     category: 'E-Commerce',
     tech: 'HTML / CSS / JavaScript',
-    emoji: '🛍️',
+    iconSvg: '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>',
     bg: 'linear-gradient(160deg, #10002a 0%, #2D1060 60%, #7C3AED 100%)',
     color: '#7C3AED',
     longDesc: 'EShop Premium adalah solusi e-commerce lengkap untuk bisnis retail modern. Dibangun dengan antarmuka yang intuitif dan desain visual yang memukau, website ini dirancang untuk meningkatkan konversi pengunjung menjadi pembeli setia.',
     features: [
       'Katalog produk dengan filter & search',
       'Keranjang belanja & checkout',
-      'Galeri foto produk zoom-able',
-      'Halaman promo & diskon',
+      'Galeri foto produk interaktif',
+      'Halaman promo & penawaran spesial',
       'Integrasi WhatsApp order',
       'Desain mobile-first responsif',
     ],
@@ -32,17 +32,17 @@ const PROJECTS = [
     name: 'Sakura Resto',
     category: 'F&B',
     tech: 'HTML / CSS / JavaScript',
-    emoji: '🍜',
+    iconSvg: '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>',
     bg: 'linear-gradient(160deg, #1a0008 0%, #5B0020 60%, #E11D48 100%)',
     color: '#E11D48',
     longDesc: 'Sakura Resto hadir dengan landing page yang menggugah selera. Sistem reservasi online, menu interaktif dengan animasi halus, dan galeri foto makanan berkualitas tinggi membuat restoran ini tampil premium dan profesional.',
     features: [
       'Menu interaktif dengan kategori',
-      'Sistem reservasi online',
-      'Galeri foto makanan premium',
-      'Peta lokasi & jam operasional',
-      'Tombol pesan via WhatsApp',
-      'Responsif di semua perangkat',
+      'Sistem reservasi online praktis',
+      'Galeri foto kuliner berkualitas tinggi',
+      'Peta lokasi & jam operasional terintegrasi',
+      'Tombol pesan langsung via WhatsApp',
+      'Tampilan optimal di semua layar',
     ],
   },
   {
@@ -50,17 +50,17 @@ const PROJECTS = [
     name: 'FitnessPro Club',
     category: 'UMKM / Gym',
     tech: 'HTML / CSS / JavaScript',
-    emoji: '💪',
+    iconSvg: '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5v14M18 5v14M2 9v6M22 9v6M6 12h12"/></svg>',
     bg: 'linear-gradient(160deg, #001208 0%, #064E3B 60%, #10B981 100%)',
     color: '#10B981',
-    longDesc: 'FitnessPro Club memiliki website gym yang powerful dan energik. Jadwal kelas mingguan, paket membership yang jelas, galeri fasilitas, dan form pendaftaran online membuat gym ini tampak profesional dan menarik member baru.',
+    longDesc: 'FitnessPro Club memiliki website gym yang dinamis dan berenergi. Jadwal kelas mingguan, paket membership yang jelas, galeri fasilitas lengkap, dan formulir pendaftaran online menjadikan gym ini tampak terpercaya dan menarik member baru.',
     features: [
       'Jadwal kelas mingguan interaktif',
-      'Paket membership & harga',
-      'Galeri fasilitas gym',
+      'Paket membership & transparansi harga',
+      'Galeri fasilitas gym modern',
       'Form pendaftaran member online',
-      'Countdown promo & diskon',
-      'Video hero section',
+      'Section promo & benefit member',
+      'Performa loading super cepat',
     ],
   },
   {
@@ -68,17 +68,17 @@ const PROJECTS = [
     name: 'AgencyX Creative',
     category: 'Korporat',
     tech: 'HTML / CSS / JavaScript',
-    emoji: '🏢',
+    iconSvg: '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>',
     bg: 'linear-gradient(160deg, #00061A 0%, #0C2A6E 60%, #3B82F6 100%)',
     color: '#3B82F6',
-    longDesc: 'AgencyX Creative adalah company profile agensi periklanan yang menonjolkan portofolio dan layanan secara visual. Desain minimalis premium dengan animasi scroll yang elegan mencerminkan identitas agensi yang profesional.',
+    longDesc: 'AgencyX Creative adalah company profile agensi kreatif yang menonjolkan portofolio dan solusi bisnis secara visual. Desain minimalis premium dengan animasi halus mencerminkan reputasi agensi yang berkelas tinggi.',
     features: [
-      'Portfolio grid dengan lightbox',
-      'Halaman layanan detail',
-      'Profil tim & keahlian',
-      'Counter statistik animasi',
-      'Blog & case study',
-      'Formulir kontak interaktif',
+      'Portofolio showcase interaktif',
+      'Detail layanan & paket kerja',
+      'Profil tim & kompetensi utama',
+      'Statistik pencapaian agensi',
+      'Studi kasus proyek klien',
+      'Formulir brief kerja cepat',
     ],
   },
   {
@@ -86,17 +86,17 @@ const PROJECTS = [
     name: 'EduLearn Platform',
     category: 'Pendidikan',
     tech: 'HTML / CSS / JavaScript',
-    emoji: '📚',
+    iconSvg: '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
     bg: 'linear-gradient(160deg, #1A0E00 0%, #713F12 60%, #F59E0B 100%)',
     color: '#F59E0B',
-    longDesc: 'EduLearn Platform menawarkan landing page platform edukasi online yang modern dan informatif. Katalog kursus lengkap, profil instruktur, testimoni murid, dan CTA yang kuat membuat platform ini tampak terpercaya dan profesional.',
+    longDesc: 'EduLearn Platform menawarkan landing page edukasi online yang modern, ramah pengguna, dan informatif. Katalog kursus terstruktur, profil mentor berpengalaman, dan alur pendaftaran yang jelas memperkuat kredibilitas institusi.',
     features: [
-      'Katalog kursus dengan filter',
-      'Profil instruktur berpengalaman',
-      'Testimoni & rating murid',
-      'Statistik platform (murid, kursus)',
-      'FAQ accordion interaktif',
-      'CTA pendaftaran yang kuat',
+      'Katalog kursus dengan filter teratur',
+      'Profil mentor & instruktur ahli',
+      'Ulasan & rating alumni terverifikasi',
+      'Data capaian pembelajaran',
+      'FAQ informasi perkuliahan',
+      'Tombol pendaftaran yang jelas',
     ],
   },
   {
@@ -104,17 +104,17 @@ const PROJECTS = [
     name: 'PropertyX Realty',
     category: 'Properti',
     tech: 'HTML / CSS / JavaScript',
-    emoji: '🏡',
+    iconSvg: '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
     bg: 'linear-gradient(160deg, #00121A 0%, #0A4A5A 60%, #14B8A6 100%)',
     color: '#14B8A6',
-    longDesc: 'PropertyX Realty menampilkan listing properti premium dengan UI yang bersih dan elegan. Fitur pencarian canggih, galeri foto HD, dan informasi properti yang lengkap menjadikan website ini sebagai alat pemasaran properti yang efektif.',
+    longDesc: 'PropertyX Realty menampilkan listing properti premium dengan tata letak bersih dan mewah. Fitur pencarian presisi, galeri gambar resolusi tinggi, serta spesifikasi detail menjadikan platform ini media pemasaran properti yang sangat efektif.',
     features: [
-      'Listing properti dengan filter',
-      'Galeri foto HD per properti',
-      'Peta interaktif lokasi',
-      'Form inquiry kontak agen',
-      'Kalkulator cicilan KPR',
-      'Virtual tour 360° ready',
+      'Listing properti dengan filter lokasi & tipe',
+      'Galeri foto definisi tinggi',
+      'Peta lokasi & fasilitas terdekat',
+      'Formulir kontak langsung ke agen',
+      'Informasi simulasi cicilan',
+      'Tampilan eksklusif dan profesional',
     ],
   },
 ];
@@ -207,7 +207,7 @@ function initParticles() {
 function initTyping() {
   const el = $('#typingText');
   if (!el) return;
-  const words = ['Berkembang ✦', 'Bersinar ✦', 'Tumbuh ✦', 'Sukses ✦'];
+  const words = ['Berkembang', 'Maju Cepat', 'Tumbuh Pesat', 'Lebih Sukses'];
   let wi = 0, ci = 0, deleting = false;
 
   function type() {
@@ -224,22 +224,116 @@ function initTyping() {
 }
 
 // ============================================================
-// 3. NAVBAR — scroll effect + active link
+// 3. NAVBAR - Interactive Magnetic Pill, Scroll Effects & Spy
 // ============================================================
 function initNavbar() {
-  const navbar    = $('#navbar');
-  const hamburger = $('#hamburger');
-  const navLinks  = $('#navLinks');
-  const sections  = $$('section[id]');
-  const links     = $$('.nav-link');
+  const navbar        = $('#navbar');
+  const hamburger     = $('#hamburger');
+  const navLinks      = $('#navLinks');
+  const indicator     = $('#navIndicator');
+  const progressBar   = $('#navProgressBar');
+  const sections      = $$('section[id]');
+  const links         = $$('.nav-link');
+  let isHoveringNav   = false;
+  let currentSection  = '';
 
-  // Scroll: glass effect
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  // Move indicator to target link
+  function moveToLink(link, instant = false) {
+    if (!link || !indicator || window.innerWidth <= 768) {
+      if (indicator) indicator.style.opacity = '0';
+      return;
+    }
+    const containerRect = navLinks.getBoundingClientRect();
+    const linkRect      = link.getBoundingClientRect();
+
+    const left  = linkRect.left - containerRect.left;
+    const width = linkRect.width;
+
+    if (instant) {
+      indicator.style.transition = 'none';
+      requestAnimationFrame(() => {
+        indicator.style.transform = `translate(${left}px, -50%)`;
+        indicator.style.width = `${width}px` ;
+        indicator.style.opacity = '1';
+        requestAnimationFrame(() => {
+          indicator.style.transition = '';
+        });
+      });
+      return;
+    }
+
+    indicator.style.transform = `translate(${left}px, -50%)`;
+    indicator.style.width = `${width}px`;
+    indicator.style.opacity = '1';
+  }
+
+  // Hover animations on links
+  links.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      isHoveringNav = true;
+      moveToLink(link);
+    });
+  });
+
+  navLinks && navLinks.addEventListener('mouseleave', () => {
+    isHoveringNav = false;
+    const activeLink = $('.nav-link.active');
+    if (activeLink) {
+      moveToLink(activeLink);
+    } else {
+      indicator && (indicator.style.opacity = '0');
+    }
+  });
+
+  // Scroll effect: glass background + scroll progress bar + section spy
+  function onScroll() {
+    const scrollY = window.scrollY;
+
+    // Navbar glass style on scroll
+    navbar.classList.toggle('scrolled', scrollY > 30);
+
+    // Update progress bar
+    if (progressBar) {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const percent = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+      progressBar.style.width = `${Math.min(100, Math.max(0, percent))}%`;
+    }
+
+    // Active Section Spy
     updateActiveLink();
-  }, { passive: true });
+  }
 
-  // Hamburger
+  function updateActiveLink() {
+    let current = '';
+    const scrollY = window.scrollY + 140;
+
+    sections.forEach(sec => {
+      if (sec.offsetTop <= scrollY) current = sec.id;
+    });
+
+    if (!current && sections.length > 0) {
+      current = sections[0].id;
+    }
+
+    if (current !== currentSection) {
+      currentSection = current;
+      links.forEach(link => {
+        const isActive = link.dataset.section === current;
+        link.classList.toggle('active', isActive);
+        if (isActive && !isHoveringNav) {
+          moveToLink(link);
+        }
+      });
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', () => {
+    const activeLink = $('.nav-link.active');
+    if (activeLink) moveToLink(activeLink, true);
+  });
+
+  // Hamburger Toggle
   hamburger && hamburger.addEventListener('click', () => {
     const open = navLinks.classList.toggle('mobile-open');
     hamburger.classList.toggle('open', open);
@@ -251,19 +345,16 @@ function initNavbar() {
     link.addEventListener('click', () => {
       navLinks.classList.remove('mobile-open');
       hamburger && hamburger.classList.remove('open');
+      hamburger && hamburger.setAttribute('aria-expanded', 'false');
     });
   });
 
-  function updateActiveLink() {
-    let current = '';
-    const scrollY = window.scrollY + 120;
-    sections.forEach(sec => {
-      if (sec.offsetTop <= scrollY) current = sec.id;
-    });
-    links.forEach(link => {
-      link.classList.toggle('active', link.dataset.section === current);
-    });
-  }
+  // Initial call
+  onScroll();
+  setTimeout(() => {
+    const activeLink = $('.nav-link.active') || links[0];
+    if (activeLink) moveToLink(activeLink, true);
+  }, 200);
 }
 
 // ============================================================
@@ -391,7 +482,7 @@ function openModal(idx) {
   // Preview area
   const previewWrap = $('#modalPreviewWrap');
   previewWrap.style.background = p.bg;
-  previewWrap.innerHTML = `<span style="filter:drop-shadow(0 0 20px rgba(255,255,255,0.3))">${p.emoji}</span>`;
+  previewWrap.innerHTML = `<div class="modal-preview-icon">${p.iconSvg}</div>`;
 
   // Tags
   const tagsWrap = $('#modalTagsWrap');
