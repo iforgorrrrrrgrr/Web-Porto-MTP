@@ -1573,10 +1573,15 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .service-card {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-self: stretch;
+  box-sizing: border-box;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--r-xl);
@@ -1699,6 +1704,7 @@ button {
 }
 
 .service-price {
+  margin-top: auto;
   margin-bottom: 20px;
 }
 
@@ -1829,6 +1835,10 @@ button {
 
   .services-grid::-webkit-scrollbar {
     display: none;
+  }
+
+  .services-grid {
+    align-items: stretch;
   }
 
   .services-grid .service-card {
@@ -2757,4 +2767,21 @@ button {
     padding: 7px 14px;
     font-size: 0.82rem;
   }
+}
+
+/* Equal-height service cards */
+.services-grid {
+  align-items: stretch !important;
+}
+
+.services-grid > .service-card {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  height: auto !important;
+  box-sizing: border-box;
+}
+
+.services-grid > .service-card .service-price {
+  margin-top: auto;
 }

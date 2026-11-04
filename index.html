@@ -1,1513 +1,981 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MTP Studio | Portofolio Web Development Modern</title>
-    <meta
-      name="description"
-      content="MTP Studio adalah startup web development yang membangun website impian bisnis Anda. Lihat portfolio kami yang telah membantu puluhan bisnis berkembang secara digital."
-    />
-    <meta
-      name="keywords"
-      content="web development, landing page, website, portofolio, MTP Studio, e-commerce"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar" id="navbar">
-      <div class="nav-container">
-        <a href="#home" class="nav-logo" id="navLogo">
-          <span class="logo-mtp">MTP</span><span class="logo-dot">.</span
-          ><span class="logo-studio">Studio</span>
-        </a>
-        <ul class="nav-links" id="navLinks">
-          <li class="nav-indicator" id="navIndicator" aria-hidden="true"></li>
-          <li>
-            <a href="#home" class="nav-link active" data-section="home">Home</a>
-          </li>
-          <li>
-            <a href="#portfolio" class="nav-link" data-section="portfolio"
-              >Portfolio</a
-            >
-          </li>
-          <li>
-            <a href="#services" class="nav-link" data-section="services"
-              >Services</a
-            >
-          </li>
-          <li>
-            <a href="#about" class="nav-link" data-section="about">About</a>
-          </li>
-          <li>
-            <a href="#contact" class="nav-link" data-section="contact"
-              >Contact</a
-            >
-          </li>
-        </ul>
-        <a href="#contact" class="btn-nav" id="btn-cta-nav">
-          <span>Mulai Sekarang</span>
-          <svg
-            width="15"
-            height="15"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </a>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-      <!-- Scroll Progress Indicator -->
-      <div
-        class="nav-progress-bar"
-        id="navProgressBar"
-        aria-hidden="true"
-      ></div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MTP Studio | Portofolio Web Development Modern</title>
+  <meta name="description"
+    content="MTP Studio adalah startup web development yang membangun website impian bisnis Anda. Lihat portfolio kami yang telah membantu puluhan bisnis berkembang secara digital." />
+  <meta name="keywords" content="web development, landing page, website, portofolio, MTP Studio, e-commerce" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <!-- ===== HERO SECTION ===== -->
-    <section class="hero" id="home">
-      <canvas id="particleCanvas"></canvas>
-      <div class="hero-container">
-        <div class="hero-content">
-          <h1 class="hero-title" data-animate-hero>
-            Kami Bangun<br />
-            Website yang<br />
-            <span class="hero-gradient">Bikin Bisnis</span><br />
-            Kamu <span class="hero-typing" id="typingText"></span
-            ><span class="typing-cursor">|</span>
-          </h1>
-          <p class="hero-desc" data-animate-hero>
-            Dari landing page yang memukau hingga toko online yang powerful,
-            kami hadir untuk mewujudkan visi digital bisnis kamu.
-          </p>
-          <div class="hero-actions" data-animate-hero>
-            <a href="#portfolio" class="btn-primary" id="btn-hero-portfolio">
-              <span>Lihat Portfolio</span>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-            <a href="#contact" class="btn-secondary" id="btn-hero-contact">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path
-                  d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-                />
-              </svg>
-              <span>Hubungi Kami</span>
-            </a>
-          </div>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="navLogo">
+        <span class="logo-mtp">MTP</span><span class="logo-dot">.</span><span class="logo-studio">Studio</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li class="nav-indicator" id="navIndicator" aria-hidden="true"></li>
+        <li>
+          <a href="#home" class="nav-link active" data-section="home">Home</a>
+        </li>
+        <li>
+          <a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="#services" class="nav-link" data-section="services">Services</a>
+        </li>
+        <li>
+          <a href="#about" class="nav-link" data-section="about">About</a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        </li>
+      </ul>
+      <a href="#contact" class="btn-nav" id="btn-cta-nav">
+        <span>Mulai Sekarang</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Scroll Progress Indicator -->
+    <div class="nav-progress-bar" id="navProgressBar" aria-hidden="true"></div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title" data-animate-hero>
+          Kami Bangun<br />
+          Website yang<br />
+          <span class="hero-gradient">Bikin Bisnis</span><br />
+          Kamu <span class="hero-typing" id="typingText"></span><span class="typing-cursor">|</span>
+        </h1>
+        <p class="hero-desc" data-animate-hero>
+          Dari landing page yang memukau hingga toko online yang powerful,
+          kami hadir untuk mewujudkan visi digital bisnis kamu.
+        </p>
+        <div class="hero-actions" data-animate-hero>
+          <a href="#portfolio" class="btn-primary" id="btn-hero-portfolio">
+            <span>Lihat Portfolio</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#contact" class="btn-secondary" id="btn-hero-contact">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+            <span>Hubungi Kami</span>
+          </a>
         </div>
-        <div class="hero-visual" data-animate-hero>
-          <div class="browser-wrap">
-            <div class="browser-mockup">
-              <div class="browser-bar">
-                <div class="browser-dots">
-                  <span class="bdot red"></span>
-                  <span class="bdot yellow"></span>
-                  <span class="bdot green"></span>
-                </div>
-                <div class="browser-url">mtpstudio.id/portfolio</div>
+      </div>
+      <div class="hero-visual" data-animate-hero>
+        <div class="browser-wrap">
+          <div class="browser-mockup">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <span class="bdot red"></span>
+                <span class="bdot yellow"></span>
+                <span class="bdot green"></span>
               </div>
-              <div class="browser-content">
-                <div class="mock-site">
-                  <div class="mock-nav">
-                    <div class="mock-logo"></div>
-                    <div class="mock-links">
-                      <span></span><span></span><span></span>
+              <div class="browser-url">mtpstudio.id/portfolio</div>
+            </div>
+            <div class="browser-content">
+              <div class="mock-site">
+                <div class="mock-nav">
+                  <div class="mock-logo"></div>
+                  <div class="mock-links">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="mock-nav-btn"></div>
+                </div>
+                <div class="mock-hero-area">
+                  <div class="mock-hero-text">
+                    <div class="mock-h1"></div>
+                    <div class="mock-h1 short"></div>
+                    <div class="mock-p"></div>
+                    <div class="mock-p shorter"></div>
+                    <div class="mock-cta-row">
+                      <div class="mock-btn-solid"></div>
+                      <div class="mock-btn-outline"></div>
                     </div>
-                    <div class="mock-nav-btn"></div>
                   </div>
-                  <div class="mock-hero-area">
-                    <div class="mock-hero-text">
-                      <div class="mock-h1"></div>
-                      <div class="mock-h1 short"></div>
-                      <div class="mock-p"></div>
-                      <div class="mock-p shorter"></div>
-                      <div class="mock-cta-row">
-                        <div class="mock-btn-solid"></div>
-                        <div class="mock-btn-outline"></div>
-                      </div>
-                    </div>
-                    <div class="mock-hero-img"></div>
-                  </div>
-                  <div class="mock-cards-row">
-                    <div class="mock-card-sm c1"></div>
-                    <div class="mock-card-sm c2"></div>
-                    <div class="mock-card-sm c3"></div>
-                  </div>
+                  <div class="mock-hero-img"></div>
+                </div>
+                <div class="mock-cards-row">
+                  <div class="mock-card-sm c1"></div>
+                  <div class="mock-card-sm c2"></div>
+                  <div class="mock-card-sm c3"></div>
                 </div>
               </div>
             </div>
-            <div class="browser-glow"></div>
           </div>
-          <div class="floating-badge badge-1">
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <polyline points="12 6 12 12 16 14" />
-            </svg>
-            <span>Fast Delivery</span>
-          </div>
-          <div class="floating-badge badge-2">
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-              />
-            </svg>
-            <span>Premium Design</span>
-          </div>
-          <div class="floating-badge badge-3">
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-              <line x1="12" y1="18" x2="12.01" y2="18" />
-            </svg>
-            <span>Responsive Layout</span>
-          </div>
+          <div class="browser-glow"></div>
         </div>
-      </div>
-    </section>
-
-    <!-- ===== STATS SECTION NOT NEEDED !!! ===== -->
-
-    <!-- ===== PORTFOLIO SECTION ===== -->
-    <section class="portfolio" id="portfolio">
-      <div class="section-container">
-        <div class="section-header" data-animate>
-          <p class="section-tag">What We've Built</p>
-          <h2 class="section-title">
-            Our <span class="highlight">Portfolio</span>
-          </h2>
-          <p class="section-desc">
-            Eksplorasi karya-karya terbaik kami yang telah membantu puluhan
-            bisnis berkembang secara digital.
-          </p>
-        </div>
-
-        <div class="filter-tabs" data-animate>
-          <button class="filter-btn active" data-filter="all" id="filter-all">
-            All
-          </button>
-          <button
-            class="filter-btn"
-            data-filter="korporat"
-            id="filter-korporat"
-          >
-            Korporat
-          </button>
-          <button
-            class="filter-btn"
-            data-filter="pendidikan"
-            id="filter-pendidikan"
-          >
-            Pendidikan
-          </button>
-          <button class="filter-btn" data-filter="ai" id="filter-ai">AI</button>
-          <button
-            class="filter-btn"
-            data-filter="ecommerce"
-            id="filter-ecommerce"
-          >
-            E-Commerce
-          </button>
-          <button class="filter-btn" data-filter="sistem" id="filter-sistem">
-            Sistem
-          </button>
-        </div>
-
-        <div class="portfolio-grid" id="portfolioGrid">
-          <!-- Card 1: Nusa-Hire -->
-          <article
-            class="portfolio-card"
-            data-category="korporat"
-            data-project="0"
-            data-animate
-          >
-            <div class="card-preview preview-1">
-              <div class="prev-nav">
-                <div class="prev-logo"></div>
-                <div class="prev-links"><i></i><i></i><i></i></div>
-                <div class="prev-btn"></div>
-              </div>
-              <div class="prev-hero">
-                <div class="prev-text">
-                  <div class="prev-h1"></div>
-                  <div class="prev-h1 s"></div>
-                  <div class="prev-p"></div>
-                  <div class="prev-action"><span></span></div>
-                </div>
-                <div class="prev-art art-hire">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <polyline points="16 11 18 13 22 9" />
-                  </svg>
-                </div>
-              </div>
-              <div class="prev-cards-row">
-                <div class="prev-c"></div>
-                <div class="prev-c"></div>
-                <div class="prev-c"></div>
-              </div>
-            </div>
-            <div class="card-overlay">
-              <button class="overlay-view-btn" data-project="0" id="proj-btn-0">
-                View Project ↗
-              </button>
-            </div>
-            <div class="card-info">
-              <div class="card-tags">
-                <span class="tag cat-tag">Korporat</span>
-                <span class="tag tech-tag">AI / Web App</span>
-              </div>
-              <h3 class="card-title">Nusa-Hire</h3>
-              <p class="card-desc">
-                Platform rekrutmen berbasis AI untuk mencocokkan kandidat dan
-                lowongan.
-              </p>
-            </div>
-          </article>
-
-          <!-- Card 2: KMB Library -->
-          <article
-            class="portfolio-card"
-            data-category="pendidikan"
-            data-project="1"
-            data-animate
-          >
-            <div class="card-preview preview-2">
-              <div class="prev-nav">
-                <div class="prev-logo"></div>
-                <div class="prev-links"><i></i><i></i><i></i></div>
-                <div class="prev-btn"></div>
-              </div>
-              <div class="prev-hero">
-                <div class="prev-text">
-                  <div class="prev-h1"></div>
-                  <div class="prev-h1 s"></div>
-                  <div class="prev-p"></div>
-                  <div class="prev-action"><span></span></div>
-                </div>
-                <div class="prev-art art-library">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                  </svg>
-                </div>
-              </div>
-              <div class="prev-cards-row">
-                <div class="prev-c"></div>
-                <div class="prev-c"></div>
-                <div class="prev-c"></div>
-              </div>
-            </div>
-            <div class="card-overlay">
-              <button class="overlay-view-btn" data-project="1" id="proj-btn-1">
-                View Project ↗
-              </button>
-            </div>
-            <div class="card-info">
-              <div class="card-tags">
-                <span class="tag cat-tag">Pendidikan</span>
-                <span class="tag tech-tag">Web App</span>
-              </div>
-              <h3 class="card-title">KMB Library</h3>
-              <p class="card-desc">
-                Perpustakaan digital gratis dengan koleksi buku dan leaderboard
-                belajar.
-              </p>
-            </div>
-          </article>
-
-          <!-- Card 3: Wibsqii -->
-          <article
-            class="portfolio-card"
-            data-category="ai"
-            data-project="2"
-            data-animate
-          >
-            <div class="card-preview preview-3">
-              <div class="prev-nav">
-                <div class="prev-logo"></div>
-                <div class="prev-links"><i></i><i></i><i></i></div>
-                <div class="prev-btn"></div>
-              </div>
-              <div class="prev-hero">
-                <div class="prev-text">
-                  <div class="prev-h1"></div>
-                  <div class="prev-h1 s"></div>
-                  <div class="prev-p"></div>
-                  <div class="prev-action"><span></span></div>
-                </div>
-                <div class="prev-art art-ai">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <rect x="4" y="4" width="16" height="16" rx="2" />
-                    <rect x="9" y="9" width="6" height="6" />
-                    <line x1="9" y1="1" x2="9" y2="4" />
-                    <line x1="15" y1="1" x2="15" y2="4" />
-                    <line x1="9" y1="20" x2="9" y2="23" />
-                    <line x1="15" y1="20" x2="15" y2="23" />
-                    <line x1="20" y1="9" x2="23" y2="9" />
-                    <line x1="20" y1="14" x2="23" y2="14" />
-                    <line x1="1" y1="9" x2="4" y2="9" />
-                    <line x1="1" y1="14" x2="4" y2="14" />
-                  </svg>
-                </div>
-              </div>
-              <div class="prev-cards-row">
-                <div class="prev-c"></div>
-                <div class="prev-c"></div>
-                <div class="prev-c"></div>
-              </div>
-            </div>
-            <div class="card-overlay">
-              <button class="overlay-view-btn" data-project="2" id="proj-btn-2">
-                View Project ↗
-              </button>
-            </div>
-            <div class="card-info">
-              <div class="card-tags">
-                <span class="tag cat-tag">AI</span>
-                <span class="tag tech-tag">Agentic AI</span>
-              </div>
-              <h3 class="card-title">Wibsqii</h3>
-              <p class="card-desc">
-                Platform agentic AI untuk menjalankan agen otonom multi-tugas.
-              </p>
-            </div>
-          </article>
-
-          <!-- Card 4: Siluman -->
-          <article
-            class="portfolio-card"
-            data-category="sistem"
-            data-project="3"
-            data-animate
-          >
-            <div class="card-preview preview-4">
-              <div class="prev-nav">
-                <div class="prev-logo"></div>
-                <div class="prev-links"><i></i><i></i><i></i></div>
-                <div class="prev-btn"></div>
-              </div>
-              <div class="prev-hero">
-                <div class="prev-text">
-                  <div class="prev-h1"></div>
-                  <div class="prev-h1 s"></div>
-                  <div class="prev-p"></div>
-                  <div class="prev-action"><span></span></div>
-                </div>
-                <div class="prev-art art-siluman">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <polyline points="4 17 10 11 4 5" />
-                    <line x1="12" y1="19" x2="20" y2="19" />
-                  </svg>
-                </div>
-              </div>
-              <div class="prev-cards-row">
-                <div class="prev-c"></div>
-                <div class="prev-c"></div>
-                <div class="prev-c"></div>
-              </div>
-            </div>
-            <div class="card-overlay">
-              <button class="overlay-view-btn" data-project="3" id="proj-btn-3">
-                View Project ↗
-              </button>
-            </div>
-            <div class="card-info">
-              <div class="card-tags">
-                <span class="tag cat-tag">Sistem</span>
-                <span class="tag tech-tag">Interactive Web</span>
-              </div>
-              <h3 class="card-title">Siluman</h3>
-              <p class="card-desc">
-                Tes keselarasan manusia — kuis interaktif bergaya terminal
-                diagnostik.
-              </p>
-            </div>
-          </article>
-
-          <!-- Card 5: Berjaya Gemilang Teknik -->
-          <article
-            class="portfolio-card"
-            data-category="ecommerce"
-            data-project="4"
-            data-animate
-          >
-            <div class="card-preview preview-5">
-              <div class="prev-nav">
-                <div class="prev-logo"></div>
-                <div class="prev-links"><i></i><i></i><i></i></div>
-                <div class="prev-btn"></div>
-              </div>
-              <div class="prev-hero">
-                <div class="prev-text">
-                  <div class="prev-h1"></div>
-                  <div class="prev-h1 s"></div>
-                  <div class="prev-p"></div>
-                  <div class="prev-action"><span></span></div>
-                </div>
-                <div class="prev-art art-berjaya">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <rect x="1" y="3" width="15" height="13" />
-                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
-                    <circle cx="5.5" cy="18.5" r="2.5" />
-                    <circle cx="18.5" cy="18.5" r="2.5" />
-                  </svg>
-                </div>
-              </div>
-              <div class="prev-cards-row">
-                <div class="prev-c"></div>
-                <div class="prev-c"></div>
-                <div class="prev-c"></div>
-              </div>
-            </div>
-            <div class="card-overlay">
-              <button class="overlay-view-btn" data-project="4" id="proj-btn-4">
-                View Project ↗
-              </button>
-            </div>
-            <div class="card-info">
-              <div class="card-tags">
-                <span class="tag cat-tag">E-Commerce</span>
-                <span class="tag tech-tag">WooCommerce</span>
-              </div>
-              <h3 class="card-title">Berjaya Gemilang Teknik</h3>
-              <p class="card-desc">
-                Toko online sparepart truk &amp; alat berat Howo, Shacman,
-                Weichai, dan XCMG.
-              </p>
-            </div>
-          </article>
-        </div>
-        <!-- /portfolio-grid -->
-      </div>
-    </section>
-
-    <!-- ===== PROJECT MODAL ===== -->
-    <div
-      class="modal-overlay"
-      id="projectModal"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Project Details"
-    >
-      <div class="modal-box">
-        <button class="modal-close" id="modalClose" aria-label="Tutup modal">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
+        <div class="floating-badge badge-1">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
           </svg>
-        </button>
-        <div class="modal-preview-wrap" id="modalPreviewWrap"></div>
-        <div class="modal-details">
-          <div class="modal-tags-wrap" id="modalTagsWrap"></div>
-          <h2 class="modal-title" id="modalTitle"></h2>
-          <p class="modal-long-desc" id="modalLongDesc"></p>
-          <div class="modal-features-list" id="modalFeaturesList"></div>
-          <a href="#contact" class="btn-primary modal-cta-btn" id="modalCTA"
-            >Mau Website Seperti Ini? →</a
-          >
+          <span>Fast Delivery</span>
+        </div>
+        <div class="floating-badge badge-2">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
+          <span>Premium Design</span>
+        </div>
+        <div class="floating-badge badge-3">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+            <line x1="12" y1="18" x2="12.01" y2="18" />
+          </svg>
+          <span>Responsive Layout</span>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- ===== SERVICES SECTION ===== -->
-    <section class="services" id="services">
-      <div class="section-container">
-        <div class="section-header" data-animate>
-          <p class="section-tag">Pricelist</p>
-          <h2 class="section-title">
-            Daftar <span class="highlight">Harga</span>
-          </h2>
-          <p class="section-desc">
-            Semua paket dapat diskon 20% dan sudah termasuk gratis 3x revisi.
-          </p>
-        </div>
+  <!-- ===== STATS SECTION NOT NEEDED !!! ===== -->
 
-        <div class="pricing-layout">
-          <div class="pricing-carousel">
-            <div class="services-grid" id="pricingTrack">
-              <div class="service-card" data-animate id="svc-landing">
-                <div class="service-icon-wrap">
-                  <div class="service-icon">
-                    <svg
-                      width="26"
-                      height="26"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                      <line x1="8" y1="21" x2="16" y2="21" />
-                      <line x1="12" y1="17" x2="12" y2="21" />
-                    </svg>
-                  </div>
-                </div>
-                <h3 class="service-name">Landing Page</h3>
-                <p class="service-desc">
-                  Halaman promosi yang dirancang untuk mengkonversi pengunjung
-                  menjadi pelanggan. Cocok untuk pelaku UMKM dan bisnis baru.
-                </p>
-                <ul class="service-features">
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Desain modern &amp; responsif</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Optimasi kecepatan loading</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Integrasi WhatsApp &amp; sosmed</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>SEO dasar</span>
-                  </li>
-                </ul>
-                <div class="service-price">
-                  <span class="price-old">Rp 500rb</span>
-                  <span class="price-amount">Rp 400rb</span>
-                </div>
-                <a href="#contact" class="btn-service" id="svc-btn-landing"
-                  >Pilih Paket</a
-                >
-              </div>
-
-              <div class="service-card" data-animate id="svc-spa">
-                <div class="service-icon-wrap">
-                  <div class="service-icon">
-                    <svg
-                      width="26"
-                      height="26"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <h3 class="service-name">SPA / Homepage</h3>
-                <p class="service-desc">
-                  Single-page application atau homepage interaktif dengan
-                  animasi halus, cocok untuk startup dan produk digital.
-                </p>
-                <ul class="service-features">
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Single-page interaktif</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Animasi halus &amp; modern</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Optimasi performa tinggi</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Responsif di semua layar</span>
-                  </li>
-                </ul>
-                <div class="service-price">
-                  <span class="price-old">Rp 1jt</span>
-                  <span class="price-amount">Rp 800rb</span>
-                </div>
-                <a href="#contact" class="btn-service" id="svc-btn-spa"
-                  >Pilih Paket</a
-                >
-              </div>
-
-              <div class="service-card" data-animate id="svc-corp">
-                <div class="service-icon-wrap">
-                  <div class="service-icon">
-                    <svg
-                      width="26"
-                      height="26"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                    </svg>
-                  </div>
-                </div>
-                <h3 class="service-name">Company Profile</h3>
-                <p class="service-desc">
-                  Website resmi perusahaan yang profesional untuk membangun
-                  kepercayaan dan kredibilitas bisnis di mata klien.
-                </p>
-                <ul class="service-features">
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Hingga 7 halaman</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Profil tim &amp; layanan</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Blog &amp; artikel</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Formulir kontak &amp; maps</span>
-                  </li>
-                </ul>
-                <div class="service-price">
-                  <span class="price-old">Rp 2,5jt</span>
-                  <span class="price-amount">Rp 2jt</span>
-                </div>
-                <a href="#contact" class="btn-service" id="svc-btn-corp"
-                  >Pilih Paket</a
-                >
-              </div>
-
-              <div class="service-card" data-animate id="svc-wp-landing">
-                <div class="service-icon-wrap">
-                  <div class="service-icon">
-                    <svg
-                      width="26"
-                      height="26"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <circle cx="12" cy="12" r="10" />
-                      <line x1="2" y1="12" x2="22" y2="12" />
-                      <path
-                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <h3 class="service-name">WordPress Landing Page</h3>
-                <p class="service-desc">
-                  Landing page berbasis WordPress yang cepat dibangun, mudah
-                  dikelola sendiri, dan siap dipakai promosi.
-                </p>
-                <ul class="service-features">
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Cepat dibangun dengan WordPress</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Desain responsif siap pakai</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Mudah dikelola sendiri</span>
-                  </li>
-                </ul>
-                <div class="service-price">
-                  <span class="price-old">Rp 200rb</span>
-                  <span class="price-amount">Rp 160rb</span>
-                </div>
-                <a href="#contact" class="btn-service" id="svc-btn-wp-landing"
-                  >Pilih Paket</a
-                >
-              </div>
-
-              <div class="service-card" data-animate id="svc-wp-home">
-                <div class="service-icon-wrap">
-                  <div class="service-icon">
-                    <svg
-                      width="26"
-                      height="26"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon points="12 2 2 7 12 12 22 7 12 2" />
-                      <polyline points="2 17 12 22 22 17" />
-                      <polyline points="2 12 12 17 22 12" />
-                    </svg>
-                  </div>
-                </div>
-                <h3 class="service-name">WordPress Homepage</h3>
-                <p class="service-desc">
-                  Homepage WordPress multi-section lengkap dengan blog dan
-                  halaman pendukung untuk kebutuhan umum bisnis.
-                </p>
-                <ul class="service-features">
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Multi-section homepage</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Tema WordPress premium</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Optimasi SEO dasar</span>
-                  </li>
-                </ul>
-                <div class="service-price">
-                  <span class="price-old">Rp 600rb</span>
-                  <span class="price-amount">Rp 480rb</span>
-                </div>
-                <a href="#contact" class="btn-service" id="svc-btn-wp-home"
-                  >Pilih Paket</a
-                >
-              </div>
-
-              <div class="service-card" data-animate id="svc-wp-corp">
-                <div class="service-icon-wrap">
-                  <div class="service-icon">
-                    <svg
-                      width="26"
-                      height="26"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                    </svg>
-                  </div>
-                </div>
-                <h3 class="service-name">WordPress Company Profile</h3>
-                <p class="service-desc">
-                  Company profile lengkap berbasis WordPress dengan blog, profil
-                  perusahaan, dan formulir kontak terintegrasi.
-                </p>
-                <ul class="service-features">
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Struktur lengkap perusahaan</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Blog &amp; artikel terintegrasi</span>
-                  </li>
-                  <li>
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="check-svg"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" /></svg
-                    ><span>Formulir kontak &amp; maps</span>
-                  </li>
-                </ul>
-                <div class="service-price">
-                  <span class="price-old">Rp 1,8jt</span>
-                  <span class="price-amount">Rp 1,44jt</span>
-                </div>
-                <a href="#contact" class="btn-service" id="svc-btn-wp-corp"
-                  >Pilih Paket</a
-                >
-              </div>
-            </div>
-
-            <div class="carousel-progress" aria-hidden="true">
-              <div class="carousel-progress-bar" id="pricingProgressBar"></div>
-            </div>
-          </div>
-
-          <div class="layout-hinge" aria-hidden="true"></div>
-
-          <aside class="addons-panel">
-            <div class="addons-head">
-              <h3 class="addons-title">Add Ons</h3>
-              <p class="addons-note">
-                Gratis 3x revisi di setiap paket · Maks +5 revisi
-              </p>
-            </div>
-            <ul class="addons-list">
-              <li>
-                <span class="addon-name">+1 Revisi</span>
-                <span class="addon-price">Rp 50rb</span>
-              </li>
-              <li>
-                <span class="addon-name">+2 Revisi</span>
-                <span class="addon-price">Rp 90rb</span>
-              </li>
-              <li>
-                <span class="addon-name"
-                  >Hosting 1 bulan <em> (free domain)</em></span
-                >
-                <span class="addon-price">Rp 100rb</span>
-              </li>
-              <li>
-                <span class="addon-name"
-                  >Hosting 6 bulan <em> (free domain)</em></span
-                >
-                <span class="addon-price">Rp 550rb</span>
-              </li>
-              <li>
-                <span class="addon-name"
-                  >Hosting 12 bulan <em> (free domain)</em></span
-                >
-                <span class="addon-price">Rp 1100rb</span>
-              </li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== ABOUT SECTION ===== -->
-    <section class="about" id="about">
-      <div class="section-container">
-        <div class="about-grid">
-          <div class="about-content" data-animate>
-            <p class="section-tag">Who We Are</p>
-            <h2 class="section-title">
-              Tim Muda yang<br /><span class="highlight">Passionate</span>
-            </h2>
-            <p class="about-text">
-              MTP Studio lahir dari semangat sekelompok talenta digital yang
-              percaya bahwa setiap bisnis, mulai dari UMKM hingga perusahaan
-              besar, berhak memiliki kehadiran online yang kuat dan profesional.
-            </p>
-            <p class="about-text">
-              Kami menggabungkan desain modern, kode yang bersih, dan strategi
-              digital untuk menciptakan website yang tidak hanya cantik, tapi
-              juga <em>bekerja keras</em> buat bisnis kamu.
-            </p>
-            <div class="about-highlights">
-              <div class="highlight-item">
-                <span class="hi-icon"
-                  ><svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="m16 12-4-4-4 4" />
-                    <path d="M12 16V8" /></svg
-                ></span>
-                <div class="hi-text">
-                  <strong>Berorientasi Hasil</strong>
-                  <p>
-                    Website kami dirancang untuk menghasilkan konversi nyata.
-                  </p>
-                </div>
-              </div>
-              <div class="highlight-item">
-                <span class="hi-icon"
-                  ><svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <polygon
-                      points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
-                    /></svg
-                ></span>
-                <div class="hi-text">
-                  <strong>Cepat &amp; Responsif</strong>
-                  <p>
-                    Optimal di semua perangkat, baik smartphone, tablet, maupun
-                    desktop.
-                  </p>
-                </div>
-              </div>
-              <div class="highlight-item">
-                <span class="hi-icon"
-                  ><svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg
-                ></span>
-                <div class="hi-text">
-                  <strong>Dukungan Penuh</strong>
-                  <p>
-                    Kami mendampingi kamu bahkan setelah website sudah live.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="about-team-wrap" data-animate>
-            <div class="team-grid">
-              <div class="team-card" id="team-rizky">
-                <div class="team-avatar av-1">DS</div>
-                <div class="team-name">Dharma Santoso</div>
-                <div class="team-role">Programmer</div>
-              </div>
-              <div class="team-card" id="team-taufik">
-                <div class="team-avatar av-2">EVC</div>
-                <div class="team-name">Elvin V. C.</div>
-                <div class="team-role">Programmer</div>
-              </div>
-              <div class="team-card" id="team-andi">
-                <div class="team-avatar av-3">JGW</div>
-                <div class="team-name">Jason G. W.</div>
-                <div class="team-role">Programmer</div>
-              </div>
-              <div class="team-card" id="team-nadia">
-                <div class="team-avatar av-4">SS</div>
-                <div class="team-name">Samuel S.</div>
-                <div class="team-role">Programmer</div>
-              </div>
-            </div>
-            <div class="team-badge-wrap">
-              <div class="team-badge">
-                <svg
-                  width="15"
-                  height="15"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="8" r="7" />
-                  <polyline
-                    points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
-                  /></svg
-                ><span>Agensi Web Berpengalaman</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CONTACT SECTION ===== -->
-    <section class="contact" id="contact">
-      <div class="contact-glow-orb"></div>
-      <div class="section-container">
-        <div class="contact-box" data-animate>
-          <p class="section-tag">Let's Talk</p>
-          <h2 class="contact-title">
-            Siap Punya Website<br /><span class="highlight">Impian Kamu?</span>
-          </h2>
-          <p class="contact-desc">
-            Hubungi kami sekarang dan dapatkan
-            <strong>konsultasi GRATIS</strong> untuk project website-mu!
-          </p>
-          <div class="contact-actions">
-            <a
-              href="https://wa.me/6281200000000"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-whatsapp"
-              id="btn-whatsapp"
-            >
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-                />
-              </svg>
-              WhatsApp Kami
-            </a>
-          </div>
-          <div class="contact-info-row">
-            <div class="ci-item">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" /></svg
-              ><span>Mall Taman Palem Lt.1</span>
-            </div>
-            <div class="ci-item">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                /></svg
-              ><span>+62 851-6280-3980</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <a href="#home" class="nav-logo">
-            <span class="logo-mtp">MTP</span><span class="logo-dot">.</span
-            ><span class="logo-studio">Studio</span>
-          </a>
-          <p class="footer-tagline">Kami bangun website impian bisnis Anda.</p>
-        </div>
-        <div class="footer-links-wrap">
-          <div class="footer-col">
-            <h4>Navigasi</h4>
-            <a href="#home">Home</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </div>
-          <div class="footer-col">
-            <h4>Layanan</h4>
-            <a href="#services">Landing Page</a>
-            <a href="#services">SPA / Homepage</a>
-            <a href="#services">Company Profile</a>
-            <a href="#contact">Konsultasi Gratis</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>
-          © 2024 MTP Studio. Seluruh hak cipta dilindungi. Berbasis di
-          Indonesia.
+  <!-- ===== PORTFOLIO SECTION ===== -->
+  <section class="portfolio" id="portfolio">
+    <div class="section-container">
+      <div class="section-header" data-animate>
+        <p class="section-tag">What We've Built</p>
+        <h2 class="section-title">
+          Our <span class="highlight">Portfolio</span>
+        </h2>
+        <p class="section-desc">
+          Eksplorasi karya-karya terbaik kami yang telah membantu puluhan
+          bisnis berkembang secara digital.
         </p>
       </div>
-    </footer>
 
-    <script src="script.js"></script>
-  </body>
+      <div class="filter-tabs" data-animate>
+        <button class="filter-btn active" data-filter="all" id="filter-all">
+          All
+        </button>
+        <button class="filter-btn" data-filter="korporat" id="filter-korporat">
+          Korporat
+        </button>
+        <button class="filter-btn" data-filter="pendidikan" id="filter-pendidikan">
+          Pendidikan
+        </button>
+        <button class="filter-btn" data-filter="ai" id="filter-ai">AI</button>
+        <button class="filter-btn" data-filter="ecommerce" id="filter-ecommerce">
+          E-Commerce
+        </button>
+        <button class="filter-btn" data-filter="sistem" id="filter-sistem">
+          Sistem
+        </button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+        <!-- Card 1: Nusa-Hire -->
+        <article class="portfolio-card" data-category="korporat" data-project="0" data-animate>
+          <div class="card-preview preview-1">
+            <div class="prev-nav">
+              <div class="prev-logo"></div>
+              <div class="prev-links"><i></i><i></i><i></i></div>
+              <div class="prev-btn"></div>
+            </div>
+            <div class="prev-hero">
+              <div class="prev-text">
+                <div class="prev-h1"></div>
+                <div class="prev-h1 s"></div>
+                <div class="prev-p"></div>
+                <div class="prev-action"><span></span></div>
+              </div>
+              <div class="prev-art art-hire">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <polyline points="16 11 18 13 22 9" />
+                </svg>
+              </div>
+            </div>
+            <div class="prev-cards-row">
+              <div class="prev-c"></div>
+              <div class="prev-c"></div>
+              <div class="prev-c"></div>
+            </div>
+          </div>
+          <div class="card-overlay">
+            <button class="overlay-view-btn" data-project="0" id="proj-btn-0">
+              View Project ↗
+            </button>
+          </div>
+          <div class="card-info">
+            <div class="card-tags">
+              <span class="tag cat-tag">Korporat</span>
+              <span class="tag tech-tag">AI / Web App</span>
+            </div>
+            <h3 class="card-title">Nusa-Hire</h3>
+            <p class="card-desc">
+              Platform rekrutmen berbasis AI untuk mencocokkan kandidat dan
+              lowongan.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 2: KMB Library -->
+        <article class="portfolio-card" data-category="pendidikan" data-project="1" data-animate>
+          <div class="card-preview preview-2">
+            <div class="prev-nav">
+              <div class="prev-logo"></div>
+              <div class="prev-links"><i></i><i></i><i></i></div>
+              <div class="prev-btn"></div>
+            </div>
+            <div class="prev-hero">
+              <div class="prev-text">
+                <div class="prev-h1"></div>
+                <div class="prev-h1 s"></div>
+                <div class="prev-p"></div>
+                <div class="prev-action"><span></span></div>
+              </div>
+              <div class="prev-art art-library">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+              </div>
+            </div>
+            <div class="prev-cards-row">
+              <div class="prev-c"></div>
+              <div class="prev-c"></div>
+              <div class="prev-c"></div>
+            </div>
+          </div>
+          <div class="card-overlay">
+            <button class="overlay-view-btn" data-project="1" id="proj-btn-1">
+              View Project ↗
+            </button>
+          </div>
+          <div class="card-info">
+            <div class="card-tags">
+              <span class="tag cat-tag">Pendidikan</span>
+              <span class="tag tech-tag">Web App</span>
+            </div>
+            <h3 class="card-title">KMB Library</h3>
+            <p class="card-desc">
+              Perpustakaan digital gratis dengan koleksi buku dan leaderboard
+              belajar.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 3: Wibsqii -->
+        <article class="portfolio-card" data-category="ai" data-project="2" data-animate>
+          <div class="card-preview preview-3">
+            <div class="prev-nav">
+              <div class="prev-logo"></div>
+              <div class="prev-links"><i></i><i></i><i></i></div>
+              <div class="prev-btn"></div>
+            </div>
+            <div class="prev-hero">
+              <div class="prev-text">
+                <div class="prev-h1"></div>
+                <div class="prev-h1 s"></div>
+                <div class="prev-p"></div>
+                <div class="prev-action"><span></span></div>
+              </div>
+              <div class="prev-art art-ai">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="4" y="4" width="16" height="16" rx="2" />
+                  <rect x="9" y="9" width="6" height="6" />
+                  <line x1="9" y1="1" x2="9" y2="4" />
+                  <line x1="15" y1="1" x2="15" y2="4" />
+                  <line x1="9" y1="20" x2="9" y2="23" />
+                  <line x1="15" y1="20" x2="15" y2="23" />
+                  <line x1="20" y1="9" x2="23" y2="9" />
+                  <line x1="20" y1="14" x2="23" y2="14" />
+                  <line x1="1" y1="9" x2="4" y2="9" />
+                  <line x1="1" y1="14" x2="4" y2="14" />
+                </svg>
+              </div>
+            </div>
+            <div class="prev-cards-row">
+              <div class="prev-c"></div>
+              <div class="prev-c"></div>
+              <div class="prev-c"></div>
+            </div>
+          </div>
+          <div class="card-overlay">
+            <button class="overlay-view-btn" data-project="2" id="proj-btn-2">
+              View Project ↗
+            </button>
+          </div>
+          <div class="card-info">
+            <div class="card-tags">
+              <span class="tag cat-tag">AI</span>
+              <span class="tag tech-tag">Agentic AI</span>
+            </div>
+            <h3 class="card-title">Wibsqii</h3>
+            <p class="card-desc">
+              Platform agentic AI untuk menjalankan agen otonom multi-tugas.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 4: Siluman -->
+        <article class="portfolio-card" data-category="sistem" data-project="3" data-animate>
+          <div class="card-preview preview-4">
+            <div class="prev-nav">
+              <div class="prev-logo"></div>
+              <div class="prev-links"><i></i><i></i><i></i></div>
+              <div class="prev-btn"></div>
+            </div>
+            <div class="prev-hero">
+              <div class="prev-text">
+                <div class="prev-h1"></div>
+                <div class="prev-h1 s"></div>
+                <div class="prev-p"></div>
+                <div class="prev-action"><span></span></div>
+              </div>
+              <div class="prev-art art-siluman">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="4 17 10 11 4 5" />
+                  <line x1="12" y1="19" x2="20" y2="19" />
+                </svg>
+              </div>
+            </div>
+            <div class="prev-cards-row">
+              <div class="prev-c"></div>
+              <div class="prev-c"></div>
+              <div class="prev-c"></div>
+            </div>
+          </div>
+          <div class="card-overlay">
+            <button class="overlay-view-btn" data-project="3" id="proj-btn-3">
+              View Project ↗
+            </button>
+          </div>
+          <div class="card-info">
+            <div class="card-tags">
+              <span class="tag cat-tag">Sistem</span>
+              <span class="tag tech-tag">Interactive Web</span>
+            </div>
+            <h3 class="card-title">Siluman</h3>
+            <p class="card-desc">
+              Tes keselarasan manusia — kuis interaktif bergaya terminal
+              diagnostik.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 5: Berjaya Gemilang Teknik -->
+        <article class="portfolio-card" data-category="ecommerce" data-project="4" data-animate>
+          <div class="card-preview preview-5">
+            <div class="prev-nav">
+              <div class="prev-logo"></div>
+              <div class="prev-links"><i></i><i></i><i></i></div>
+              <div class="prev-btn"></div>
+            </div>
+            <div class="prev-hero">
+              <div class="prev-text">
+                <div class="prev-h1"></div>
+                <div class="prev-h1 s"></div>
+                <div class="prev-p"></div>
+                <div class="prev-action"><span></span></div>
+              </div>
+              <div class="prev-art art-berjaya">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="1" y="3" width="15" height="13" />
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                  <circle cx="5.5" cy="18.5" r="2.5" />
+                  <circle cx="18.5" cy="18.5" r="2.5" />
+                </svg>
+              </div>
+            </div>
+            <div class="prev-cards-row">
+              <div class="prev-c"></div>
+              <div class="prev-c"></div>
+              <div class="prev-c"></div>
+            </div>
+          </div>
+          <div class="card-overlay">
+            <button class="overlay-view-btn" data-project="4" id="proj-btn-4">
+              View Project ↗
+            </button>
+          </div>
+          <div class="card-info">
+            <div class="card-tags">
+              <span class="tag cat-tag">E-Commerce</span>
+              <span class="tag tech-tag">WooCommerce</span>
+            </div>
+            <h3 class="card-title">Berjaya Gemilang Teknik</h3>
+            <p class="card-desc">
+              Toko online sparepart truk &amp; alat berat Howo, Shacman,
+              Weichai, dan XCMG.
+            </p>
+          </div>
+        </article>
+      </div>
+      <!-- /portfolio-grid -->
+    </div>
+  </section>
+
+  <!-- ===== PROJECT MODAL ===== -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-label="Project Details">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Tutup modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div class="modal-preview-wrap" id="modalPreviewWrap"></div>
+      <div class="modal-details">
+        <div class="modal-tags-wrap" id="modalTagsWrap"></div>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-long-desc" id="modalLongDesc"></p>
+        <div class="modal-features-list" id="modalFeaturesList"></div>
+        <a href="#contact" class="btn-primary modal-cta-btn" id="modalCTA">Mau Website Seperti Ini? →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services" id="services">
+    <div class="section-container">
+      <div class="section-header" data-animate>
+        <p class="section-tag">Pricelist</p>
+        <h2 class="section-title">
+          Daftar <span class="highlight">Harga</span>
+        </h2>
+        <p class="section-desc">
+          Semua paket dapat diskon 20% dan sudah termasuk gratis 3x revisi.
+        </p>
+      </div>
+
+      <div class="pricing-layout">
+        <div class="pricing-carousel">
+          <div class="services-grid" id="pricingTrack">
+            <div class="service-card" data-animate id="svc-landing">
+              <div class="service-icon-wrap">
+                <div class="service-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                  </svg>
+                </div>
+              </div>
+              <h3 class="service-name">Landing Page</h3>
+              <p class="service-desc">
+                Halaman promosi yang dirancang untuk mengkonversi pengunjung
+                menjadi pelanggan. Cocok untuk pelaku UMKM dan bisnis baru.
+              </p>
+              <ul class="service-features">
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Desain modern &amp; responsif</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Optimasi kecepatan loading</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Integrasi WhatsApp &amp; sosmed</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>SEO dasar</span>
+                </li>
+              </ul>
+              <div class="service-price">
+                <span class="price-old">Rp 500rb</span>
+                <span class="price-amount">Rp 400rb</span>
+              </div>
+              <a href="#contact" class="btn-service" id="svc-btn-landing">Pilih Paket</a>
+            </div>
+
+            <div class="service-card" data-animate id="svc-spa">
+              <div class="service-icon-wrap">
+                <div class="service-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                  </svg>
+                </div>
+              </div>
+              <h3 class="service-name">SPA / Homepage</h3>
+              <p class="service-desc">
+                Single-page application atau homepage interaktif dengan
+                animasi halus, cocok untuk startup dan produk digital.
+              </p>
+              <ul class="service-features">
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Single-page interaktif</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Animasi halus &amp; modern</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Optimasi performa tinggi</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Responsif di semua layar</span>
+                </li>
+              </ul>
+              <div class="service-price">
+                <span class="price-old">Rp 1jt</span>
+                <span class="price-amount">Rp 800rb</span>
+              </div>
+              <a href="#contact" class="btn-service" id="svc-btn-spa">Pilih Paket</a>
+            </div>
+
+            <div class="service-card" data-animate id="svc-corp">
+              <div class="service-icon-wrap">
+                <div class="service-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                  </svg>
+                </div>
+              </div>
+              <h3 class="service-name">Company Profile</h3>
+              <p class="service-desc">
+                Website resmi perusahaan yang profesional untuk membangun
+                kepercayaan dan kredibilitas bisnis di mata klien.
+              </p>
+              <ul class="service-features">
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Hingga 7 halaman</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Profil tim &amp; layanan</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Blog &amp; artikel</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Formulir kontak &amp; maps</span>
+                </li>
+              </ul>
+              <div class="service-price">
+                <span class="price-old">Rp 2,5jt</span>
+                <span class="price-amount">Rp 2jt</span>
+              </div>
+              <a href="#contact" class="btn-service" id="svc-btn-corp">Pilih Paket</a>
+            </div>
+
+            <div class="service-card" data-animate id="svc-wp-landing">
+              <div class="service-icon-wrap">
+                <div class="service-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                  </svg>
+                </div>
+              </div>
+              <h3 class="service-name">WordPress Landing Page</h3>
+              <p class="service-desc">
+                Landing page berbasis WordPress yang cepat dibangun, mudah
+                dikelola sendiri, dan siap dipakai promosi.
+              </p>
+              <ul class="service-features">
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Cepat dibangun dengan WordPress</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Desain responsif siap pakai</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Mudah dikelola sendiri</span>
+                </li>
+              </ul>
+              <div class="service-price">
+                <span class="price-old">Rp 200rb</span>
+                <span class="price-amount">Rp 160rb</span>
+              </div>
+              <a href="#contact" class="btn-service" id="svc-btn-wp-landing">Pilih Paket</a>
+            </div>
+
+            <div class="service-card" data-animate id="svc-wp-home">
+              <div class="service-icon-wrap">
+                <div class="service-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                    <polyline points="2 17 12 22 22 17" />
+                    <polyline points="2 12 12 17 22 12" />
+                  </svg>
+                </div>
+              </div>
+              <h3 class="service-name">WordPress Homepage</h3>
+              <p class="service-desc">
+                Homepage WordPress multi-section lengkap dengan blog dan
+                halaman pendukung untuk kebutuhan umum bisnis.
+              </p>
+              <ul class="service-features">
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Multi-section homepage</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Tema WordPress premium</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Optimasi SEO dasar</span>
+                </li>
+              </ul>
+              <div class="service-price">
+                <span class="price-old">Rp 600rb</span>
+                <span class="price-amount">Rp 480rb</span>
+              </div>
+              <a href="#contact" class="btn-service" id="svc-btn-wp-home">Pilih Paket</a>
+            </div>
+
+            <div class="service-card" data-animate id="svc-wp-corp">
+              <div class="service-icon-wrap">
+                <div class="service-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                  </svg>
+                </div>
+              </div>
+              <h3 class="service-name">WordPress Company Profile</h3>
+              <p class="service-desc">
+                Company profile lengkap berbasis WordPress dengan blog, profil
+                perusahaan, dan formulir kontak terintegrasi.
+              </p>
+              <ul class="service-features">
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Struktur lengkap perusahaan</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Blog &amp; artikel terintegrasi</span>
+                </li>
+                <li>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg><span>Formulir kontak &amp; maps</span>
+                </li>
+              </ul>
+              <div class="service-price">
+                <span class="price-old">Rp 1,8jt</span>
+                <span class="price-amount">Rp 1,44jt</span>
+              </div>
+              <a href="#contact" class="btn-service" id="svc-btn-wp-corp">Pilih Paket</a>
+            </div>
+          </div>
+
+          <div class="carousel-progress" aria-hidden="true">
+            <div class="carousel-progress-bar" id="pricingProgressBar"></div>
+          </div>
+        </div>
+
+        <div class="layout-hinge" aria-hidden="true"></div>
+
+        <aside class="addons-panel">
+          <div class="addons-head">
+            <h3 class="addons-title">Add Ons</h3>
+            <p class="addons-note">
+              Gratis 3x revisi di setiap paket · Maks +5 revisi
+            </p>
+          </div>
+          <ul class="addons-list">
+            <li>
+              <span class="addon-name">+1 Revisi</span>
+              <span class="addon-price">Rp 50rb</span>
+            </li>
+            <li>
+              <span class="addon-name">+2 Revisi</span>
+              <span class="addon-price">Rp 90rb</span>
+            </li>
+            <li>
+              <span class="addon-name">Hosting 1 bulan <em> (free domain)</em></span>
+              <span class="addon-price">Rp 100rb</span>
+            </li>
+            <li>
+              <span class="addon-name">Hosting 6 bulan <em> (free domain)</em></span>
+              <span class="addon-price">Rp 550rb</span>
+            </li>
+            <li>
+              <span class="addon-name">Hosting 12 bulan <em> (free domain)</em></span>
+              <span class="addon-price">Rp 1.100rb</span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about" id="about">
+    <div class="section-container">
+      <div class="about-grid">
+        <div class="about-content" data-animate>
+          <p class="section-tag">Who We Are</p>
+          <h2 class="section-title">
+            Tim Muda yang<br /><span class="highlight">Passionate</span>
+          </h2>
+          <p class="about-text">
+            MTP Studio lahir dari semangat sekelompok talenta digital yang
+            percaya bahwa setiap bisnis, mulai dari UMKM hingga perusahaan
+            besar, berhak memiliki kehadiran online yang kuat dan profesional.
+          </p>
+          <p class="about-text">
+            Kami menggabungkan desain modern, kode yang bersih, dan strategi
+            digital untuk menciptakan website yang tidak hanya cantik, tapi
+            juga <em>bekerja keras</em> buat bisnis kamu.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="hi-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="m16 12-4-4-4 4" />
+                  <path d="M12 16V8" />
+                </svg></span>
+              <div class="hi-text">
+                <strong>Berorientasi Hasil</strong>
+                <p>
+                  Website kami dirancang untuk menghasilkan konversi nyata.
+                </p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="hi-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg></span>
+              <div class="hi-text">
+                <strong>Cepat &amp; Responsif</strong>
+                <p>
+                  Optimal di semua perangkat, baik smartphone, tablet, maupun
+                  desktop.
+                </p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="hi-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg></span>
+              <div class="hi-text">
+                <strong>Dukungan Penuh</strong>
+                <p>
+                  Kami mendampingi kamu bahkan setelah website sudah live.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-team-wrap" data-animate>
+          <div class="team-grid">
+            <div class="team-card" id="team-rizky">
+              <div class="team-avatar av-1">DS</div>
+              <div class="team-name">Dharma Santoso</div>
+              <div class="team-role">Programmer</div>
+            </div>
+            <div class="team-card" id="team-taufik">
+              <div class="team-avatar av-2">EVC</div>
+              <div class="team-name">Elvin V. C.</div>
+              <div class="team-role">Programmer</div>
+            </div>
+            <div class="team-card" id="team-andi">
+              <div class="team-avatar av-3">JGW</div>
+              <div class="team-name">Jason G. W.</div>
+              <div class="team-role">Programmer</div>
+            </div>
+            <div class="team-card" id="team-nadia">
+              <div class="team-avatar av-4">SS</div>
+              <div class="team-name">Samuel S.</div>
+              <div class="team-role">Programmer</div>
+            </div>
+          </div>
+          <div class="team-badge-wrap">
+            <div class="team-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+              </svg><span>Agensi Web Berpengalaman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact" id="contact">
+    <div class="contact-glow-orb"></div>
+    <div class="section-container">
+      <div class="contact-box" data-animate>
+        <p class="section-tag">Let's Talk</p>
+        <h2 class="contact-title">
+          Siap Punya Website<br /><span class="highlight">Impian Kamu?</span>
+        </h2>
+        <p class="contact-desc">
+          Hubungi kami sekarang dan dapatkan
+          <strong>konsultasi GRATIS</strong> untuk project website-mu!
+        </p>
+        <div class="contact-actions">
+          <a href="https://wa.me/6285162803980" target="_blank" rel="noopener noreferrer" class="btn-whatsapp"
+            id="btn-whatsapp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            WhatsApp Kami
+          </a>
+        </div>
+        <div class="contact-info-row">
+          <div class="ci-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg><span>Mall Taman Palem Lt.1</span>
+          </div>
+          <div class="ci-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg><span>+62 851-6280-3980</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">
+          <span class="logo-mtp">MTP</span><span class="logo-dot">.</span><span class="logo-studio">Studio</span>
+        </a>
+        <p class="footer-tagline">Kami bangun website impian bisnis Anda.</p>
+      </div>
+      <div class="footer-links-wrap">
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <a href="#home">Home</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Layanan</h4>
+          <a href="#services">Landing Page</a>
+          <a href="#services">SPA / Homepage</a>
+          <a href="#services">Company Profile</a>
+          <a href="#contact">Konsultasi Gratis</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        © 2024 MTP Studio. Seluruh hak cipta dilindungi. Berbasis di
+        Indonesia.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
