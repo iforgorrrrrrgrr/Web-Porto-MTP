@@ -1247,7 +1247,7 @@ button {
   transform: scale(1.05);
 }
 
-/* 1: EShop - Purple */
+/* 1: Nusa-Hire - Purple */
 .preview-1 {
   background: linear-gradient(160deg, #10002a 0%, #2D1060 60%, #7C3AED 100%);
 }
@@ -1260,99 +1260,81 @@ button {
   background: #7C3AED;
 }
 
-.preview-1 .art-shop {
+.preview-1 .art-hire {
   background: linear-gradient(135deg, #4C1D95, #7C3AED);
   border: 1px solid rgba(139, 92, 246, 0.3);
 }
 
-/* 2: Sakura Resto - Red/Rose */
+/* 2: KMB Library - Amber */
 .preview-2 {
-  background: linear-gradient(160deg, #1a0008 0%, #5B0020 60%, #E11D48 100%);
-}
-
-.preview-2 .prev-btn {
-  background: #E11D48;
-}
-
-.preview-2 .prev-action span {
-  background: #E11D48;
-}
-
-.preview-2 .art-food {
-  background: linear-gradient(135deg, #881337, #E11D48);
-  border: 1px solid rgba(225, 29, 72, 0.3);
-}
-
-/* 3: FitnessPro - Green */
-.preview-3 {
-  background: linear-gradient(160deg, #001208 0%, #064E3B 60%, #10B981 100%);
-}
-
-.preview-3 .prev-btn {
-  background: #10B981;
-}
-
-.preview-3 .prev-action span {
-  background: #10B981;
-}
-
-.preview-3 .art-gym {
-  background: linear-gradient(135deg, #065F46, #10B981);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-}
-
-/* 4: AgencyX - Blue */
-.preview-4 {
-  background: linear-gradient(160deg, #00061A 0%, #0C2A6E 60%, #3B82F6 100%);
-}
-
-.preview-4 .prev-btn {
-  background: #3B82F6;
-}
-
-.preview-4 .prev-action span {
-  background: #3B82F6;
-}
-
-.preview-4 .art-agency {
-  background: linear-gradient(135deg, #1E3A8A, #3B82F6);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-}
-
-/* 5: EduLearn - Amber/Orange */
-.preview-5 {
   background: linear-gradient(160deg, #1A0E00 0%, #713F12 60%, #F59E0B 100%);
 }
 
-.preview-5 .prev-btn {
+.preview-2 .prev-btn {
   background: #F59E0B;
 }
 
-.preview-5 .prev-action span {
+.preview-2 .prev-action span {
   background: #F59E0B;
 }
 
-.preview-5 .art-edu {
+.preview-2 .art-library {
   background: linear-gradient(135deg, #92400E, #F59E0B);
   border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
-/* 6: PropertyX - Teal */
-.preview-6 {
-  background: linear-gradient(160deg, #00121A 0%, #0A4A5A 60%, #14B8A6 100%);
+/* 3: Wibsqii - Blue */
+.preview-3 {
+  background: linear-gradient(160deg, #00061A 0%, #0C2A6E 60%, #3B82F6 100%);
 }
 
-.preview-6 .prev-btn {
-  background: #14B8A6;
+.preview-3 .prev-btn {
+  background: #3B82F6;
 }
 
-.preview-6 .prev-action span {
-  background: #14B8A6;
+.preview-3 .prev-action span {
+  background: #3B82F6;
 }
 
-.preview-6 .art-prop {
-  background: linear-gradient(135deg, #134E4A, #14B8A6);
-  border: 1px solid rgba(20, 184, 166, 0.3);
+.preview-3 .art-ai {
+  background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* 4: Siluman - Terminal Green */
+.preview-4 {
+  background: linear-gradient(160deg, #020604 0%, #052e16 55%, #4ADE80 100%);
+}
+
+.preview-4 .prev-btn {
+  background: #4ADE80;
+}
+
+.preview-4 .prev-action span {
+  background: #4ADE80;
+}
+
+.preview-4 .art-siluman {
+  background: linear-gradient(135deg, #14532d, #4ADE80);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+/* 5: Berjaya Gemilang Teknik - Orange */
+.preview-5 {
+  background: linear-gradient(160deg, #1a0a00 0%, #7c2d12 60%, #F97316 100%);
+}
+
+.preview-5 .prev-btn {
+  background: #F97316;
+}
+
+.preview-5 .prev-action span {
+  background: #F97316;
+}
+
+.preview-5 .art-berjaya {
+  background: linear-gradient(135deg, #7c2d12, #F97316);
+  border: 1px solid rgba(249, 115, 22, 0.3);
 }
 
 /* Card overlay */
@@ -1732,6 +1714,187 @@ button {
   font-size: 1.6rem;
   font-weight: 800;
   color: var(--primary);
+}
+
+.price-old {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  margin-bottom: 2px;
+}
+
+/* Add-ons panel */
+.addons-panel {
+  margin-top: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 28px 32px;
+}
+
+.addons-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.addons-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.addons-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.addons-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+}
+
+.addons-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  font-size: 0.9rem;
+}
+
+.addon-name em {
+  font-style: normal;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.addon-price {
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+/* Pricing carousel progress + hinge divider (desktop only) */
+.carousel-progress {
+  display: none;
+}
+
+.layout-hinge {
+  display: none;
+}
+
+/* ============================================================
+   DESKTOP ONLY (min-width: 1025px): pinned scroll-driven
+   carousel + hinge + sticky add-ons
+============================================================ */
+@media (min-width: 1025px) {
+  .services .section-container::after {
+    content: "";
+    display: block;
+    height: 150vh;
+  }
+
+  .pricing-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) 28px minmax(0, 1fr);
+    gap: 0;
+    align-items: start;
+    position: sticky;
+    top: 88px;
+  }
+
+  .pricing-carousel {
+    min-width: 0;
+    padding-right: 14px;
+  }
+
+  .services-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .services-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .services-grid .service-card {
+    flex: 0 0 clamp(260px, 46%, 320px);
+  }
+
+  .layout-hinge {
+    display: block;
+    position: relative;
+    width: 1px;
+    justify-self: center;
+    align-self: stretch;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      var(--border) 6%,
+      var(--border) 94%,
+      transparent 100%
+    );
+  }
+
+  .layout-hinge::before,
+  .layout-hinge::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.07);
+  }
+
+  .layout-hinge::before {
+    top: 8px;
+  }
+
+  .layout-hinge::after {
+    bottom: 8px;
+  }
+
+  .carousel-progress {
+    display: block;
+    margin-top: 18px;
+    height: 4px;
+    background: var(--border);
+    border-radius: var(--r-full);
+    overflow: hidden;
+  }
+
+  .carousel-progress-bar {
+    height: 100%;
+    width: 10%;
+    background: linear-gradient(90deg, var(--primary), var(--primary-glow));
+    border-radius: var(--r-full);
+    transition: width 0.15s linear;
+  }
+
+  .addons-panel {
+    margin-top: 0;
+    margin-left: 14px;
+    position: sticky;
+    top: 96px;
+  }
 }
 
 .btn-service {
@@ -2321,10 +2484,6 @@ button {
 
 [data-animate].visible .portfolio-card:nth-child(5) {
   transition-delay: 0.25s;
-}
-
-[data-animate].visible .portfolio-card:nth-child(6) {
-  transition-delay: 0.30s;
 }
 
 [data-animate].visible .service-card:nth-child(1) {
