@@ -13,7 +13,7 @@ const PROJECTS = [
     id: 0,
     name: "Nusa-Hire",
     category: "Korporat",
-    link: "https://nusahire.vercel.app/",
+    link: "https://nusahire-theta.vercel.app/",
     tech: "AI Recruitment",
     iconSvg:
       '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>',
@@ -55,7 +55,7 @@ const PROJECTS = [
     id: 2,
     name: "Wibsqii",
     category: "AI",
-    link: "https://wibsqi-agentic-ai-8zfmeduad-wibsqi-ai.vercel.app/",
+    link: "https://wibsqi.vercel.app/",
     tech: "Agentic AI",
     iconSvg:
       '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>',
