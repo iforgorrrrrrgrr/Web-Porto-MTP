@@ -1562,21 +1562,141 @@ button {
 }
 
 /* ============================================================
-   SERVICES SECTION
+   SERVICES SECTION (Compact & Split-View: Paket & Add-ons)
 ============================================================ */
 .services {
-  padding: 100px 0;
+  padding: 60px 0 70px 0;
   background: linear-gradient(180deg, transparent 0%, rgba(56, 189, 248, 0.03) 50%, transparent 100%);
+  position: relative;
 }
 
-.services-grid {
+.services .section-header {
+  margin-bottom: 24px;
+}
+
+.services-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* 1 Tampilan: Paket (Kiri) & Add-Ons (Kanan) berdampingan */
+.services-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: minmax(0, 1.8fr) minmax(290px, 1.05fr);
+  gap: 22px;
   align-items: stretch;
 }
 
+.services-carousel-col {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pricing carousel controls */
+.pricing-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.scroll-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.scroll-hint svg {
+  color: var(--primary);
+  animation: nudgeHorizontal 1.8s ease-in-out infinite;
+}
+
+@keyframes nudgeHorizontal {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.carousel-nav-btns {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pricing-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--r-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--trans);
+  box-shadow: var(--shadow-sm);
+}
+
+.pricing-nav-btn:hover:not(:disabled) {
+  border-color: var(--primary-40);
+  background: var(--primary-10);
+  color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: var(--glow-sm);
+}
+
+.pricing-nav-btn:disabled,
+.pricing-nav-btn.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Services horizontal scroll track */
+.pricing-track-wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.services-grid {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 6px 2px 14px 2px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  align-items: stretch;
+  cursor: grab;
+}
+
+.services-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.services-grid:active {
+  cursor: grabbing;
+}
+
+/* Compact service card (tidak terlalu panjang) */
 .service-card {
+  flex: 0 0 clamp(255px, 47%, 290px);
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   height: auto;
@@ -1584,8 +1704,8 @@ button {
   box-sizing: border-box;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: var(--r-xl);
-  padding: 32px 28px;
+  border-radius: var(--r-lg);
+  padding: 18px 16px;
   transition: var(--trans);
   position: relative;
   overflow: hidden;
@@ -1605,7 +1725,7 @@ button {
 
 .service-card:hover {
   border-color: var(--primary-40);
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-card), var(--glow-sm);
 }
 
@@ -1613,16 +1733,7 @@ button {
   opacity: 1;
 }
 
-.service-card.popular {
-  border-color: var(--primary-40);
-  background: linear-gradient(160deg, var(--bg-card), rgba(56, 189, 248, 0.05));
-  box-shadow: var(--glow-md);
-  transform: translateY(-8px);
-}
 
-.service-card.popular::before {
-  opacity: 1;
-}
 
 .popular-badge {
   display: inline-flex;
@@ -1630,25 +1741,43 @@ button {
   gap: 4px;
   background: linear-gradient(135deg, var(--primary), var(--primary-glow));
   color: #000;
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   font-weight: 700;
-  padding: 4px 12px;
+  padding: 2px 9px;
   border-radius: var(--r-full);
-  margin-bottom: 20px;
+  margin-bottom: 8px;
+  align-self: flex-start;
 }
 
-.service-icon-wrap {
-  margin-bottom: 16px;
+.service-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.service-icon-wrap {
-  margin-bottom: 20px;
+.service-pill {
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 2px 8px;
+  border-radius: var(--r-full);
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.service-pill.wp {
+  background: rgba(30, 115, 190, 0.15);
+  color: #38bdf8;
+  border-color: rgba(30, 115, 190, 0.35);
 }
 
 .service-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--r-md);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--r-sm);
   background: var(--primary-10);
   border: 1px solid var(--primary-15);
   display: inline-flex;
@@ -1659,44 +1788,60 @@ button {
 }
 
 .service-card:hover .service-icon {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   background: var(--primary-15);
   border-color: var(--primary-40);
-  box-shadow: var(--glow-sm);
 }
 
 .service-name {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 
 .service-desc {
-  font-size: 0.88rem;
+  font-size: 0.78rem;
   color: var(--text-secondary);
-  line-height: 1.65;
-  margin-bottom: 20px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  min-height: 32px;
 }
 
 .service-features {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 24px;
+  gap: 6px;
+  margin-bottom: 14px;
 }
 
 .service-features li {
-  font-size: 0.88rem;
+  font-size: 0.77rem;
   color: var(--text-secondary);
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 7px;
+  line-height: 1.32;
+}
+
+.service-features li.feature-highlight {
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: var(--r-sm);
+  padding: 5px 8px;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.service-features li.feature-highlight strong {
+  color: var(--primary-glow);
+  font-weight: 700;
 }
 
 .check-svg {
   color: var(--primary);
   flex-shrink: 0;
+  margin-top: 1px;
 }
 
 .service-features li::before {
@@ -1705,218 +1850,166 @@ button {
 
 .service-price {
   margin-top: auto;
-  margin-bottom: 20px;
-}
-
-.price-from {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  margin-bottom: 2px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .price-amount {
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--primary);
+  display: block;
 }
 
 .price-old {
   display: block;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
   text-decoration: line-through;
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 
-/* Add-ons panel */
+/* Carousel progress bar */
+.carousel-progress {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  height: 3px;
+  background: var(--border);
+  border-radius: var(--r-full);
+  overflow: hidden;
+}
+
+.carousel-progress-bar {
+  height: 100%;
+  width: 20%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-glow));
+  border-radius: var(--r-full);
+  transition: width 0.15s ease-out;
+}
+
+/* Add-ons panel (Side by Side dalam 1 tampilan) */
 .addons-panel {
-  margin-top: 40px;
+  margin-top: 80px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
-  padding: 28px 32px;
+  padding: 18px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 14px;
+  align-self: start;
+  height: auto;
 }
 
 .addons-head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 18px;
+  margin-bottom: 0px;
 }
 
 .addons-title {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 800;
+  margin-bottom: 4px;
 }
 
 .addons-note {
-  font-size: 0.85rem;
+  font-size: 0.77rem;
   color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.addons-note strong {
+  color: var(--primary);
 }
 
 .addons-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 0;
 }
 
 .addons-list li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding: 12px 16px;
+  gap: 10px;
+  padding: 8px 11px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
-  border-radius: var(--r-md);
-  font-size: 0.9rem;
+  border-radius: var(--r-sm);
+  font-size: 0.8rem;
+  transition: var(--trans);
 }
 
-.addon-name em {
-  font-style: normal;
-  color: var(--text-muted);
+.addons-list li:hover {
+  border-color: var(--primary-30);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.addon-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.addon-name {
+  font-weight: 500;
   font-size: 0.8rem;
+}
+
+.addon-sub {
+  font-size: 0.7rem;
+  color: var(--text-muted);
 }
 
 .addon-price {
   font-weight: 700;
   color: var(--primary);
   white-space: nowrap;
+  font-size: 0.82rem;
 }
 
-/* Pricing carousel progress + hinge divider (desktop only) */
-.carousel-progress {
-  display: none;
-}
-
-.layout-hinge {
-  display: none;
-}
-
-/* ============================================================
-   DESKTOP ONLY (min-width: 1025px): pinned scroll-driven
-   carousel + hinge + sticky add-ons
-============================================================ */
-@media (min-width: 1025px) {
-  .services .section-container::after {
-    content: "";
-    display: block;
-    height: 150vh;
-  }
-
-  .pricing-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 2fr) 28px minmax(0, 1fr);
-    gap: 0;
-    align-items: start;
-    position: sticky;
-    top: 88px;
-  }
-
-  .pricing-carousel {
-    min-width: 0;
-    padding-right: 14px;
-  }
-
-  .services-grid {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    padding-bottom: 6px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .services-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .services-grid {
-    align-items: stretch;
-  }
-
-  .services-grid .service-card {
-    flex: 0 0 clamp(260px, 46%, 320px);
-  }
-
-  .layout-hinge {
-    display: block;
-    position: relative;
-    width: 1px;
-    justify-self: center;
-    align-self: stretch;
-    background: linear-gradient(
-      180deg,
-      transparent 0%,
-      var(--border) 6%,
-      var(--border) 94%,
-      transparent 100%
-    );
-  }
-
-  .layout-hinge::before,
-  .layout-hinge::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    background: var(--bg-base);
-    border: 1px solid var(--border);
-    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.07);
-  }
-
-  .layout-hinge::before {
-    top: 8px;
-  }
-
-  .layout-hinge::after {
-    bottom: 8px;
-  }
-
-  .carousel-progress {
-    display: block;
-    margin-top: 18px;
-    height: 4px;
-    background: var(--border);
-    border-radius: var(--r-full);
-    overflow: hidden;
-  }
-
-  .carousel-progress-bar {
-    height: 100%;
-    width: 10%;
-    background: linear-gradient(90deg, var(--primary), var(--primary-glow));
-    border-radius: var(--r-full);
-    transition: width 0.15s linear;
-  }
-
-  .addons-panel {
-    margin-top: 0;
-    margin-left: 14px;
-    position: sticky;
-    top: 96px;
-  }
+.addons-guarantee {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: rgba(56, 189, 248, 0.06);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: var(--r-sm);
+  font-size: 0.74rem;
+  color: var(--primary);
+  font-weight: 600;
 }
 
 .btn-service {
   display: block;
   text-align: center;
-  padding: 12px;
-  border-radius: var(--r-md);
+  padding: 9px;
+  border-radius: var(--r-sm);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   border: 1px solid var(--border);
   color: var(--text-primary);
   transition: var(--trans);
+}
+
+.btn-service:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-10);
+  box-shadow: var(--glow-sm);
+}
+
+
+.service-card.popular .btn-service:hover {
+  box-shadow: var(--glow-md);
+  transform: translateY(-1px);
 }
 
 .btn-service:hover {
@@ -1938,6 +2031,41 @@ button {
   box-shadow: 0 6px 24px rgba(56, 189, 248, 0.45);
   color: #000;
   background: linear-gradient(135deg, var(--primary), var(--primary-glow));
+}
+/* =========================================
+   NATURAL EDGE FADE - PRICING CAROUSEL
+========================================= */
+
+.pricing-track-wrap {
+  position: relative;
+  overflow: hidden;
+
+  /* Natural fade menuju panel Add-ons */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 72%,
+    rgba(0, 0, 0, 0.95) 80%,
+    rgba(0, 0, 0, 0.65) 88%,
+    rgba(0, 0, 0, 0.25) 95%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 72%,
+    rgba(0, 0, 0, 0.95) 80%,
+    rgba(0, 0, 0, 0.65) 88%,
+    rgba(0, 0, 0, 0.25) 95%,
+    transparent 100%
+  );
+}
+
+/* Add-ons tetap normal dan tidak ikut memudar */
+.addons-panel {
+  position: relative;
+  z-index: 2;
 }
 
 /* ============================================================
@@ -2593,10 +2721,8 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .services-grid {
-    grid-template-columns: 1fr;
-    max-width: 480px;
-    margin: 0 auto;
+  .services-grid .service-card {
+    flex: 0 0 clamp(280px, 46vw, 330px);
   }
 
   .service-card.popular {
@@ -2709,6 +2835,14 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .services-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .addons-panel {
+    align-self: stretch;
+  }
+
   .stats-container {
     flex-direction: column;
     gap: 24px;
@@ -2748,6 +2882,11 @@ button {
   .modal-details {
     padding: 20px;
   }
+
+  .services-grid .service-card {
+    flex: 0 0 min(310px, 84vw);
+    scroll-snap-align: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2767,6 +2906,20 @@ button {
     padding: 7px 14px;
     font-size: 0.82rem;
   }
+
+  .services-grid {
+    gap: 16px;
+    padding: 12px 0 18px 0;
+  }
+
+  .services-grid .service-card {
+    flex: 0 0 86vw;
+    padding: 24px 18px;
+  }
+
+  .addons-panel {
+    padding: 22px 18px;
+  }
 }
 
 /* Equal-height service cards */
@@ -2774,7 +2927,7 @@ button {
   align-items: stretch !important;
 }
 
-.services-grid > .service-card {
+.services-grid>.service-card {
   display: flex;
   flex-direction: column;
   align-self: stretch;
@@ -2782,6 +2935,6 @@ button {
   box-sizing: border-box;
 }
 
-.services-grid > .service-card .service-price {
+.services-grid>.service-card .service-price {
   margin-top: auto;
 }

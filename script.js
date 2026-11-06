@@ -668,83 +668,112 @@ function initParallax() {
 }
 
 // ============================================================
-// 11. PRICING CAROUSEL (desktop only, scroll-driven)
+// 11. PRICING CAROUSEL (Smooth interactive scroll & buttons)
 // ============================================================
 function initPricingCarousel() {
   const track = $("#pricingTrack");
   const bar = $("#pricingProgressBar");
-  const layout = document.querySelector(".pricing-layout");
-  const container = document.querySelector(".services .section-container");
-  if (!track || !layout || !container) return;
+  const prevBtn = $("#pricingPrevBtn");
+  const nextBtn = $("#pricingNextBtn");
+  if (!track) return;
 
-  const STICKY_TOP = 88;
-  let active = false;
-  let startScroll = 0;
-  let range = 1;
-
-  function measure() {
-    active = window.innerWidth > 1024;
-    if (!active) {
-      track.scrollLeft = 0;
-      return;
-    }
-    layout.style.position = "static";
-    const sy = window.scrollY;
-    const layTop = layout.getBoundingClientRect().top + sy;
-    const layH = layout.getBoundingClientRect().height;
-    const contRect = container.getBoundingClientRect();
-    layout.style.position = "";
-    const contTop = contRect.top + sy;
-    startScroll = layTop - STICKY_TOP;
-    const endScroll = contTop + contRect.height - layH - STICKY_TOP;
-    range = Math.max(1, endScroll - startScroll);
-  }
-
-  function setBar(p) {
-    if (!bar) return;
-    bar.style.width = `${Math.min(100, Math.max(10, p * 100))}%`;
-  }
-
-  function sync() {
-    if (!active) return;
-    const p = Math.min(
-      1,
-      Math.max(0, (window.scrollY - startScroll) / range),
-    );
+  function updateScrollState() {
     const max = track.scrollWidth - track.clientWidth;
-    if (max > 0) track.scrollLeft = p * max;
-    setBar(p);
+    const current = track.scrollLeft;
+    const p = max > 0 ? Math.min(1, Math.max(0, current / max)) : 0;
+
+    if (bar) {
+      bar.style.width = `${Math.max(12, p * 100)}%`;
+    }
+
+    if (prevBtn) {
+      const isStart = current <= 5;
+      prevBtn.disabled = isStart;
+      prevBtn.classList.toggle("disabled", isStart);
+    }
+    if (nextBtn) {
+      const isEnd = max <= 0 || current >= max - 5;
+      nextBtn.disabled = isEnd;
+      nextBtn.classList.toggle("disabled", isEnd);
+    }
   }
 
-  window.addEventListener("scroll", sync, { passive: true });
-  window.addEventListener(
-    "resize",
-    () => {
-      measure();
-      sync();
-    },
-    { passive: true },
-  );
-  window.addEventListener(
-    "load",
-    () => {
-      measure();
-      sync();
-    },
-    { once: true },
-  );
+  function getStep() {
+    const firstCard = track.querySelector(".service-card");
+    if (!firstCard) return 320;
+    const gap = 20;
+    return firstCard.offsetWidth + gap;
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      track.scrollBy({ left: -getStep(), behavior: "smooth" });
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      track.scrollBy({ left: getStep(), behavior: "smooth" });
+    });
+  }
+
+  // Smooth mouse drag to scroll for desktop users
+  let isDown = false;
+  let startX = 0;
+  let scrollLeft = 0;
+  let hasDragged = false;
+
+  track.addEventListener("mousedown", (e) => {
+    isDown = true;
+    hasDragged = false;
+    startX = e.pageX - track.offsetLeft;
+    scrollLeft = track.scrollLeft;
+    track.style.scrollBehavior = "auto";
+    track.style.cursor = "grabbing";
+    track.style.userSelect = "none";
+  });
+
+  const stopDragging = () => {
+    if (!isDown) return;
+    isDown = false;
+    track.style.scrollBehavior = "smooth";
+    track.style.cursor = "";
+    track.style.userSelect = "";
+    setTimeout(() => {
+      hasDragged = false;
+    }, 50);
+  };
+
+  track.addEventListener("mouseleave", stopDragging);
+  track.addEventListener("mouseup", stopDragging);
+
+  track.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    const x = e.pageX - track.offsetLeft;
+    const walk = x - startX;
+    if (Math.abs(walk) > 6) {
+      hasDragged = true;
+    }
+    track.scrollLeft = scrollLeft - walk;
+  });
+
+  // Prevent accidental link clicks when dragging
   track.addEventListener(
-    "scroll",
-    () => {
-      if (!active) return;
-      const max = track.scrollWidth - track.clientWidth;
-      setBar(max > 0 ? track.scrollLeft / max : 1);
+    "click",
+    (e) => {
+      if (hasDragged) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
     },
-    { passive: true },
+    true
   );
 
-  measure();
-  sync();
+  track.addEventListener("scroll", updateScrollState, { passive: true });
+  window.addEventListener("resize", updateScrollState, { passive: true });
+
+  // Initial check
+  updateScrollState();
 }
 
 // ============================================================

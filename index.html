@@ -469,329 +469,398 @@
   <section class="services" id="services">
     <div class="section-container">
       <div class="section-header" data-animate>
-        <p class="section-tag">Pricelist</p>
+        <p class="section-tag">Pricelist &amp; Layanan</p>
         <h2 class="section-title">
           Daftar <span class="highlight">Harga</span>
         </h2>
         <p class="section-desc">
-          Semua paket dapat diskon 20% dan sudah termasuk gratis 3x revisi.
+          Semua paket diskon 20% &amp; sudah termasuk <strong>Garansi Bebas Revisi 1,5 Bulan</strong> setelah website dideploy.
         </p>
       </div>
 
-      <div class="pricing-layout">
-        <div class="pricing-carousel">
-          <div class="services-grid" id="pricingTrack">
-            <div class="service-card" data-animate id="svc-landing">
-              <div class="service-icon-wrap">
-                <div class="service-icon">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      <div class="services-wrapper" data-animate>
+        <div class="services-layout">
+          <!-- Kolom Paket: Carousel Horizontal -->
+          <div class="services-carousel-col">
+            <div class="pricing-carousel-controls">
+              <div class="scroll-hint">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+                <span>Geser pilihan paket</span>
+              </div>
+              <div class="carousel-nav-btns">
+                <button class="pricing-nav-btn" id="pricingPrevBtn" aria-label="Paket Sebelumnya" title="Sebelumnya">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                    <line x1="8" y1="21" x2="16" y2="21" />
-                    <line x1="12" y1="17" x2="12" y2="21" />
+                    <polyline points="15 18 9 12 15 6" />
                   </svg>
-                </div>
+                </button>
+                <button class="pricing-nav-btn" id="pricingNextBtn" aria-label="Paket Berikutnya" title="Berikutnya">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
               </div>
-              <h3 class="service-name">Landing Page</h3>
-              <p class="service-desc">
-                Halaman promosi yang dirancang untuk mengkonversi pengunjung
-                menjadi pelanggan. Cocok untuk pelaku UMKM dan bisnis baru.
-              </p>
-              <ul class="service-features">
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Desain modern &amp; responsif</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Optimasi kecepatan loading</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Integrasi WhatsApp &amp; sosmed</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>SEO dasar</span>
-                </li>
-              </ul>
-              <div class="service-price">
-                <span class="price-old">Rp 500rb</span>
-                <span class="price-amount">Rp 400rb</span>
-              </div>
-              <a href="#contact" class="btn-service" id="svc-btn-landing">Pilih Paket</a>
             </div>
 
-            <div class="service-card" data-animate id="svc-spa">
-              <div class="service-icon-wrap">
-                <div class="service-icon">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                  </svg>
+            <div class="pricing-track-wrap">
+              <div class="services-grid" id="pricingTrack">
+                <!-- Paket 1: Landing Page -->
+                <div class="service-card" data-animate id="svc-landing">
+                  <h3 class="service-name">Landing Page</h3>
+                  <p class="service-desc">
+                    Halaman promosi fokus konversi &amp; leads tinggi, cepat dibuka &amp; siap jualan.
+                  </p>
+                  <ul class="service-features">
+                    <li class="feature-highlight">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg><span><strong>Garansi Revisi Bebas 1,5 Bulan</strong></span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Desain modern &amp; 100% responsif HP</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Tombol WhatsApp chat &amp; sosmed</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Fast load &amp; optimasi performa</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Free setup custom domain &amp; hosting</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Basic SEO Google &amp; share medsos</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Free konsultasi konsep &amp; konten</span>
+                    </li>
+                  </ul>
+                  <div class="service-price">
+                    <span class="price-old">Rp 500rb</span>
+                    <span class="price-amount">Rp 400rb</span>
+                  </div>
+                  <a href="#contact" class="btn-service" id="svc-btn-landing">Pilih Paket</a>
+                </div>
+
+                <!-- Paket 2: SPA / Homepage -->
+                <div class="service-card" data-animate id="svc-spa">
+                  <h3 class="service-name">SPA / Homepage</h3>
+                  <p class="service-desc">
+                    Single-page interaktif dengan animasi halus, cocok untuk startup &amp; produk digital.
+                  </p>
+                  <ul class="service-features">
+                    <li class="feature-highlight">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg><span><strong>Garansi Revisi Bebas 1,5 Bulan</strong></span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Tampilan interaktif &amp; animasi smooth</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Loading super instan tanpa reload</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Integrasi formulir &amp; chat WhatsApp</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Free setup domain &amp; SSL security</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Basic SEO &amp; indeks Google</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Panduan pakai &amp; free konsultasi</span>
+                    </li>
+                  </ul>
+                  <div class="service-price">
+                    <span class="price-old">Rp 1jt</span>
+                    <span class="price-amount">Rp 800rb</span>
+                  </div>
+                  <a href="#contact" class="btn-service" id="svc-btn-spa">Pilih Paket</a>
+                </div>
+
+                <!-- Paket 3: Company Profile (Popular) -->
+                <div class="service-card popular" data-animate id="svc-corp">
+                  <h3 class="service-name">Company Profile</h3>
+                  <p class="service-desc">
+                    Website korporat multi-halaman elegan untuk membangun kredibilitas bisnis Anda.
+                  </p>
+                  <ul class="service-features">
+                    <li class="feature-highlight">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg><span><strong>Garansi Revisi Bebas 1,5 Bulan</strong></span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Hingga 7 halaman struktur resmi</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Profil tim, layanan &amp; portofolio</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Fitur blog &amp; artikel bisnis resmi</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Form kontak &amp; Google Maps</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Free setup domain, hosting &amp; email</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Full basic SEO &amp; indeks Google</span>
+                    </li>
+                  </ul>
+                  <div class="service-price">
+                    <span class="price-old">Rp 2,5jt</span>
+                    <span class="price-amount">Rp 2jt</span>
+                  </div>
+                  <a href="#contact" class="btn-service" id="svc-btn-corp">Pilih Paket</a>
+                </div>
+
+                <!-- Paket 4: WordPress Landing Page -->
+                <div class="service-card" data-animate id="svc-wp-landing">
+                  <h3 class="service-name">WordPress Landing Page</h3>
+                  <p class="service-desc">
+                    Landing page cepat siap pakai, bebas update foto &amp; teks sendiri tanpa koding.
+                  </p>
+                  <ul class="service-features">
+                    <li class="feature-highlight">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg><span><strong>Garansi Revisi Bebas 1,5 Bulan</strong></span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Pengerjaan kilat siap jualan</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Dashboard CMS (edit mandiri)</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Desain ramah pengguna smartphone</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Tombol pesanan via WhatsApp</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Free setup ke domain &amp; hosting</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Video tutorial cara edit konten</span>
+                    </li>
+                  </ul>
+                  <div class="service-price">
+                    <span class="price-old">Rp 200rb</span>
+                    <span class="price-amount">Rp 160rb</span>
+                  </div>
+                  <a href="#contact" class="btn-service" id="svc-btn-wp-landing">Pilih Paket</a>
+                </div>
+
+                <!-- Paket 5: WordPress Homepage -->
+                <div class="service-card" data-animate id="svc-wp-home">
+                  <h3 class="service-name">WordPress Homepage</h3>
+                  <p class="service-desc">
+                    Homepage multi-section dinamis dengan blog untuk edukasi &amp; promosi produk.
+                  </p>
+                  <ul class="service-features">
+                    <li class="feature-highlight">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg><span><strong>Garansi Revisi Bebas 1,5 Bulan</strong></span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Homepage multi-bagian terstruktur</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Tema WordPress modern &amp; elegan</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Modul artikel/blog bisnis</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Form pesan &amp; WhatsApp langsung</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Free setup domain &amp; hosting</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Panduan kelola website mandiri</span>
+                    </li>
+                  </ul>
+                  <div class="service-price">
+                    <span class="price-old">Rp 600rb</span>
+                    <span class="price-amount">Rp 480rb</span>
+                  </div>
+                  <a href="#contact" class="btn-service" id="svc-btn-wp-home">Pilih Paket</a>
+                </div>
+
+                <!-- Paket 6: WordPress Company Profile -->
+                <div class="service-card" data-animate id="svc-wp-corp">
+                  <h3 class="service-name">WordPress Company Profile</h3>
+                  <p class="service-desc">
+                    Website profil perusahaan lengkap, fleksibel diupdate tanpa keahlian koding.
+                  </p>
+                  <ul class="service-features">
+                    <li class="feature-highlight">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg><span><strong>Garansi Revisi Bebas 1,5 Bulan</strong></span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Struktur resmi multi-halaman</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Halaman Layanan &amp; Portofolio</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Modul blog berita perusahaan</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Form kontak &amp; Google Maps</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Free setup domain, hosting &amp; SSL</span>
+                    </li>
+                    <li>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
+                      <span>Setup SEO &amp; video tutorial</span>
+                    </li>
+                  </ul>
+                  <div class="service-price">
+                    <span class="price-old">Rp 1,8jt</span>
+                    <span class="price-amount">Rp 1,44jt</span>
+                  </div>
+                  <a href="#contact" class="btn-service" id="svc-btn-wp-corp">Pilih Paket</a>
                 </div>
               </div>
-              <h3 class="service-name">SPA / Homepage</h3>
-              <p class="service-desc">
-                Single-page application atau homepage interaktif dengan
-                animasi halus, cocok untuk startup dan produk digital.
-              </p>
-              <ul class="service-features">
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Single-page interaktif</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Animasi halus &amp; modern</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Optimasi performa tinggi</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Responsif di semua layar</span>
-                </li>
-              </ul>
-              <div class="service-price">
-                <span class="price-old">Rp 1jt</span>
-                <span class="price-amount">Rp 800rb</span>
-              </div>
-              <a href="#contact" class="btn-service" id="svc-btn-spa">Pilih Paket</a>
             </div>
 
-            <div class="service-card" data-animate id="svc-corp">
-              <div class="service-icon-wrap">
-                <div class="service-icon">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                  </svg>
-                </div>
-              </div>
-              <h3 class="service-name">Company Profile</h3>
-              <p class="service-desc">
-                Website resmi perusahaan yang profesional untuk membangun
-                kepercayaan dan kredibilitas bisnis di mata klien.
-              </p>
-              <ul class="service-features">
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Hingga 7 halaman</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Profil tim &amp; layanan</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Blog &amp; artikel</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Formulir kontak &amp; maps</span>
-                </li>
-              </ul>
-              <div class="service-price">
-                <span class="price-old">Rp 2,5jt</span>
-                <span class="price-amount">Rp 2jt</span>
-              </div>
-              <a href="#contact" class="btn-service" id="svc-btn-corp">Pilih Paket</a>
-            </div>
-
-            <div class="service-card" data-animate id="svc-wp-landing">
-              <div class="service-icon-wrap">
-                <div class="service-icon">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="2" y1="12" x2="22" y2="12" />
-                    <path
-                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                  </svg>
-                </div>
-              </div>
-              <h3 class="service-name">WordPress Landing Page</h3>
-              <p class="service-desc">
-                Landing page berbasis WordPress yang cepat dibangun, mudah
-                dikelola sendiri, dan siap dipakai promosi.
-              </p>
-              <ul class="service-features">
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Cepat dibangun dengan WordPress</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Desain responsif siap pakai</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Mudah dikelola sendiri</span>
-                </li>
-              </ul>
-              <div class="service-price">
-                <span class="price-old">Rp 200rb</span>
-                <span class="price-amount">Rp 160rb</span>
-              </div>
-              <a href="#contact" class="btn-service" id="svc-btn-wp-landing">Pilih Paket</a>
-            </div>
-
-            <div class="service-card" data-animate id="svc-wp-home">
-              <div class="service-icon-wrap">
-                <div class="service-icon">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <polygon points="12 2 2 7 12 12 22 7 12 2" />
-                    <polyline points="2 17 12 22 22 17" />
-                    <polyline points="2 12 12 17 22 12" />
-                  </svg>
-                </div>
-              </div>
-              <h3 class="service-name">WordPress Homepage</h3>
-              <p class="service-desc">
-                Homepage WordPress multi-section lengkap dengan blog dan
-                halaman pendukung untuk kebutuhan umum bisnis.
-              </p>
-              <ul class="service-features">
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Multi-section homepage</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Tema WordPress premium</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Optimasi SEO dasar</span>
-                </li>
-              </ul>
-              <div class="service-price">
-                <span class="price-old">Rp 600rb</span>
-                <span class="price-amount">Rp 480rb</span>
-              </div>
-              <a href="#contact" class="btn-service" id="svc-btn-wp-home">Pilih Paket</a>
-            </div>
-
-            <div class="service-card" data-animate id="svc-wp-corp">
-              <div class="service-icon-wrap">
-                <div class="service-icon">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                  </svg>
-                </div>
-              </div>
-              <h3 class="service-name">WordPress Company Profile</h3>
-              <p class="service-desc">
-                Company profile lengkap berbasis WordPress dengan blog, profil
-                perusahaan, dan formulir kontak terintegrasi.
-              </p>
-              <ul class="service-features">
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Struktur lengkap perusahaan</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Blog &amp; artikel terintegrasi</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" class="check-svg" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg><span>Formulir kontak &amp; maps</span>
-                </li>
-              </ul>
-              <div class="service-price">
-                <span class="price-old">Rp 1,8jt</span>
-                <span class="price-amount">Rp 1,44jt</span>
-              </div>
-              <a href="#contact" class="btn-service" id="svc-btn-wp-corp">Pilih Paket</a>
+            <div class="carousel-progress" aria-hidden="true">
+              <div class="carousel-progress-bar" id="pricingProgressBar"></div>
             </div>
           </div>
 
-          <div class="carousel-progress" aria-hidden="true">
-            <div class="carousel-progress-bar" id="pricingProgressBar"></div>
-          </div>
+          <!-- Kolom Samping: Add-Ons (Satu Tampilan Berdampingan) -->
+          <aside class="addons-panel" data-animate>
+            <div class="addons-head">
+              <h3 class="addons-title">Layanan Tambahan (Add-Ons)</h3>
+              <p class="addons-note">
+                *Semua paket di samping sudah termasuk <strong>Garansi Bebas Revisi 1,5 Bulan</strong> setelah website dideploy.
+              </p>
+            </div>
+            <ul class="addons-list">
+              <li>
+                <div class="addon-info">
+                  <span class="addon-name">Revisi / Maintenance Tambahan</span>
+                  <span class="addon-sub">Setelah masa 1,5 bulan habis</span>
+                </div>
+                <span class="addon-price">Mulai Rp 50rb</span>
+              </li>
+              <li>
+                <div class="addon-info">
+                  <span class="addon-name">Cloud Hosting 1 Bulan</span>
+                  <span class="addon-sub">Termasuk Free Domain</span>
+                </div>
+                <span class="addon-price">Rp 100rb</span>
+              </li>
+              <li>
+                <div class="addon-info">
+                  <span class="addon-name">Cloud Hosting 6 Bulan</span>
+                  <span class="addon-sub">Hemat + Free Domain</span>
+                </div>
+                <span class="addon-price">Rp 550rb</span>
+              </li>
+              <li>
+                <div class="addon-info">
+                  <span class="addon-name">Cloud Hosting 12 Bulan</span>
+                  <span class="addon-sub">Paling Hemat + Free Domain</span>
+                </div>
+                <span class="addon-price">Rp 1.100rb</span>
+              </li>
+            </ul>
+          </aside>
         </div>
-
-        <div class="layout-hinge" aria-hidden="true"></div>
-
-        <aside class="addons-panel">
-          <div class="addons-head">
-            <h3 class="addons-title">Add Ons</h3>
-            <p class="addons-note">
-              Gratis 3x revisi di setiap paket · Maks +5 revisi
-            </p>
-          </div>
-          <ul class="addons-list">
-            <li>
-              <span class="addon-name">+1 Revisi</span>
-              <span class="addon-price">Rp 50rb</span>
-            </li>
-            <li>
-              <span class="addon-name">+2 Revisi</span>
-              <span class="addon-price">Rp 90rb</span>
-            </li>
-            <li>
-              <span class="addon-name">Hosting 1 bulan <em> (free domain)</em></span>
-              <span class="addon-price">Rp 100rb</span>
-            </li>
-            <li>
-              <span class="addon-name">Hosting 6 bulan <em> (free domain)</em></span>
-              <span class="addon-price">Rp 550rb</span>
-            </li>
-            <li>
-              <span class="addon-name">Hosting 12 bulan <em> (free domain)</em></span>
-              <span class="addon-price">Rp 1.100rb</span>
-            </li>
-          </ul>
-        </aside>
       </div>
     </div>
   </section>
@@ -881,15 +950,6 @@
               <div class="team-avatar av-4">SS</div>
               <div class="team-name">Samuel S.</div>
               <div class="team-role">Programmer</div>
-            </div>
-          </div>
-          <div class="team-badge-wrap">
-            <div class="team-badge">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="8" r="7" />
-                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
-              </svg><span>Agensi Web Berpengalaman</span>
             </div>
           </div>
         </div>
